@@ -6,7 +6,10 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
+    "gatsby-plugin-styled-components",
+    "gatsby-image",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: `gatsby-source-drupal`,
       options: {

@@ -1,15 +1,20 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import Button from 'react-bootstrap/Button'
+import HeroSlider, {
+  Slide,
+  Nav
+} from 'hero-slider'
+
+import BasicSlider from "../components/BasicSlider/BasicSlider"
 
 const IndexPage = () => {
+
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <StaticImage
-        alt="Clifford, a big red dog"
-        src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
-      />
+      <BasicSlider />
+      Test
     </Layout>
   )
 }
