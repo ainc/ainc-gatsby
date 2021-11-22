@@ -17,7 +17,6 @@ const Layout = ({ pageTitle, children }) => {
 
     <div>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <header>{data.site.siteMetadata.title}</header>
       <Header />
         
       {children}
