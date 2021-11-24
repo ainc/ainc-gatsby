@@ -1,17 +1,34 @@
 import * as React from 'react';
 import { Button } from "react-bootstrap"
 import { BtnBrand } from "./BrandButton.module.scss"
+import styled from 'styled-components';
 
-class BrandButton extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.className = this.className + props.className
+const StyledButton = styled.button`
+  font-family: "open sans";
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: #c12029;
+  padding: 0.8rem 2.4rem;
+  color: #fff;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  @include font-size(12);
+  border: 2px solid #c12029;
+  border-radius: 4px;
+  position: relative;
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
   }
-
-  render() { 
-    return <Button className={`${BtnBrand}` + this.props.className}>{this.props.children}</Button>
+  &:hover {
+    color: #222;
   }
+`
+
+const BrandButton = (props) => {
+    return <StyledButton {...props}/>
 }
  
 export default BrandButton;
