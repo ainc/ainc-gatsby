@@ -11,3 +11,27 @@ body {
   margin: 0;
   color: rgba(50, 51, 51, 0.8);
 }
+
+.btn-primary {
+  font-family: $heading-font;
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: $brand-color;
+  padding: 0.5rem 2rem;
+  color: $white-color;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  @include font-size(12);
+  border: 2px solid $brand-color;
+  border-radius: 4px;
+  position: relative;
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+  &:hover {
+    color: $brand-color2;
+  }
+}
