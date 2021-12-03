@@ -11,33 +11,15 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const CardIconBG = () => {
     const dataTwo = useStaticQuery(graphql`
-    {
-        data {
-          allNodeIconCardWBg {
-            nodes 
-              {
-                field_text {
-                    title
-                }
-                field_icon {
-                  alt
-                }
-                field_bg_ima {
-                  alt
-                }
-                relationships {
-                  field_bg_ima {
-                    uri {
-                      url
-                    }
-                  }
-                  field_icon {
-                    uri {
-                      url
-                    }
-                  }
-                }
+      query {
+        nodeIconCardWBg {
+          field_text
+          relationships {
+            field_bg_ima {
+              uri {
+                url
               }
+            }
           }
         }
       }
@@ -46,15 +28,15 @@ const CardIconBG = () => {
 
     return (
         <Card>
-            <Card.Img src={dataTwo.allNodeIconCardWBg.nodes.relationships.field_bg_ima.uri.url}/> 
+            <Card.Img src={dataTwo.nodeIconCardWBg.relationships.field_bg_ima.uri.url}/> 
             <Card.ImgOverlay>
                 <Card.Body>
-                    <Card.Img src={dataTwo.allNodeIconCardWBg.nodes.relationships.field_icon.uri.url}/>
+                    {/* <Card.Img src={dataTwo.allNodeIconCardWBg.nodes.relationships.field_icon.uri.url}/> */}
                     <Card.Header>
-                        {dataTwo.allNodeIconCardWBg.nodes.title}
+                        {dataTwo.nodeIconCardWBg.field_text}
                     </Card.Header>
                     <Card.Text>
-                        {dataTwo.allNodeIconCardWBg.nodes.field_text}
+                        {/* {dataTwo.allNodeIconCardWBg.nodes.field_text} */}
                     </Card.Text>
                 </Card.Body>
             </Card.ImgOverlay>
