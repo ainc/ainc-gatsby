@@ -8,6 +8,8 @@ import HeroSlider, {
 } from 'hero-slider'
 
 import BasicSlider from "../components/BasicSlider/BasicSlider"
+import CardIconBG from "../components/CardIconBG/CardIconBG"
+
 
 const IndexPage = () => {
 
@@ -15,7 +17,9 @@ const IndexPage = () => {
     <Layout pageTitle="Home Page">
       <BasicSlider />
       Test
+      <CardIconBG />
     </Layout>
+
   )
 }
 
