@@ -1,11 +1,15 @@
 import React from "react"
 import styled from 'styled-components';
 
-const RotationDegree = 5;
+const Rotation = -5;
+const width = 100;
+const fullWidth = 100;
 // const MagicNumber = 0.09719;
-const SkewPadding = 100 * MagicNumber;
-const ClipPadding = 100 * MagicNumber;
-const MagicNumber = Math.tan(RotationDegree) / 2;
+const RotationDeg = Rotation * (Math.PI / 180);
+const MagicNumber = Math.tan(RotationDeg) / 2;
+console.log("Magic #: " + MagicNumber);
+const SkewPadding = width * MagicNumber;
+const ClipPadding = fullWidth * MagicNumber;
 
 const DiagonalDiv = styled.div`
   position: relative;
@@ -19,7 +23,7 @@ const DiagonalDiv = styled.div`
     left: 0;
     bottom: 0;
     background-image: linear-gradient(45deg, #654ea3, #eaafc8); 	
-    transform: skewY(${RotationDegree}deg);
+    transform: skewY(${Rotation}deg);
     transform-origin: 50% 0;
     backface-visibility: hidden;
   }

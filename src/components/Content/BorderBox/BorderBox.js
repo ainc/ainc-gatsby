@@ -4,27 +4,71 @@ import {
   Container,
   Row
 } from "react-bootstrap"
+import Title from "../../UI/Title/Title"
 
-const Header = styled.h2`
-  border:3px solid;
-  height:300px;
-  position:relative;
+const Bracket = styled.span`
+  width: 60%;
+  height: 250px;
+  background: white;
+  position: relative;
+  margin: 20px;
+  border-right: 4px solid #B9B2C0;
+  border-left: 4px solid #B9B2C0;
+  text-align: center;
+`
 
+const LeftSpan = styled.span`
   &:before {
-    content:'Header';
-    position:absolute;
-    top:-10px;
-    left:50px;
-    background:#fff;
-    padding:0 20px;
+    content: '';
+    width: 30%;
+    height: 4px;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }  
+  &:after {
+    content: '';
+    width: 30%;
+    height: 4px;
+    background: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 `
+
+const RightSpan = styled.span`
+  &:before {
+    content: '';
+    width: 30%;
+    height: 4px;
+    background: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &:after {
+    content: '';
+    width: 30%;
+    height: 4px;
+    background: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+`
+
 
 const BorderBox = (props) => {
   return (
     <Container>
       <Row>
-        <Header />
+        <Bracket>
+          <LeftSpan />
+          <RightSpan />
+          <Title>Test</Title>
+        </Bracket>
       </Row>
     </Container>
   )
