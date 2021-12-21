@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins"; 
+
+.EventsCard {
+    display: flex;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.EventsCard:hover 
+{   opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.Events {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 4%;
+    text-align: left;
+}
+
+.Title {
+    color: #ffff;
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.DateCard {
+    background-color: #ffff;
+    height: 7rem;
+    width: 7rem;
+    color: black;
+    display: flex;
+    position: absolute;
+    bottom: 4%;
+    padding-top: 7%;
+}
+
+.DateTitle {
+    color: $brand-color;
+    font-size: xx-large;
+    font-weight: 900;
+}

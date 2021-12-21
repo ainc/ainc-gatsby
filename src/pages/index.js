@@ -6,6 +6,7 @@ import HeroSlider, {
   Slide,
   Nav
 } from 'hero-slider'
+import EventCard from '../components/EventCard/EventCard'
 
 import BasicSlider from "../components/BasicSlider/BasicSlider"
 
@@ -14,9 +15,9 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <BasicSlider />
-      Test
+      <EventCard />
     </Layout>
   )
 }
 
-export default IndexPage
+export default IndexPage;
