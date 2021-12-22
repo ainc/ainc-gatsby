@@ -1,0 +1,1 @@
+1. How do you add a class to a component

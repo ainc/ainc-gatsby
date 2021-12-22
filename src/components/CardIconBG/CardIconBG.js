@@ -7,40 +7,52 @@
 import * as React from 'react'
 import { Card } from "react-bootstrap"
 import { useStaticQuery, graphql } from 'gatsby'
+import { 
+    card,
+    cardOverlay,
+    cardIcon,
+    heading,
+    heading__subtitle
+ } from './CardIconBG.module.scss'
+import styled from 'styled-components'
 
-
-const CardIconBG = () => {
-    const dataTwo = useStaticQuery(graphql`
-      query {
-        nodeIconCardWBg {
-          field_text
-          relationships {
-            field_bg_ima {
-              uri {
-                url
-              }
-            }
+export const query = graphql`
+    query  {
+        allNodeIconCardWBg {
+          nodes {
+            field_text
           }
         }
-      }
+      }`
 
-    `)
+const CardIconBG = ({ data }) => {
+
+const CardBg = styled.div`
+ background-position: center center;
+ height: auto;
+`
 
     return (
-        <Card>
-            <Card.Img src={dataTwo.nodeIconCardWBg.relationships.field_bg_ima.uri.url}/> 
-            <Card.ImgOverlay>
-                <Card.Body>
-                    {/* <Card.Img src={dataTwo.allNodeIconCardWBg.nodes.relationships.field_icon.uri.url}/> */}
-                    <Card.Header>
-                        {dataTwo.nodeIconCardWBg.field_text}
+        <div>{
+        data.allNodeIconCardWBg.nodes.map((node) =>(
+        <Card style={{ width: '18rem' }}>
+                <CardBg>
+                <Card.Body className={card, cardOverlay}>
+                    {/* <Card.Img src={cardBgData.nodeIconCardWBg.relationships.field_icon.localFile.url} className={cardIcon}/> */}
+                    <Card.Header className={heading}>
+                        {/* {cardBgData.nodeIconCardWBg.title} */}
                     </Card.Header>
+                    <Card.Text className={heading__subtitle}>
+                        {node.field_text}
+                    </Card.Text>
                     <Card.Text>
-                        {/* {dataTwo.allNodeIconCardWBg.nodes.field_text} */}
+                        {/* test: {cardBgData.allNodeIconCardWBg.nodes.totalCount} */}
                     </Card.Text>
                 </Card.Body>
-            </Card.ImgOverlay>
+                </CardBg>        
         </Card>
+        ))
+    }</div>
     )
 }
 
