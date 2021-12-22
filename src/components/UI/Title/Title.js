@@ -1,13 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// CSS
-import { Container, Title } from './Title.module.scss'
+import styled from 'styled-components'
+import * as styles from '../../../styles/Variables'
+
+const Title = styled.h1`
+  font-family: ${styles.styles.fonts.headingFont};
+  @include font-size(32);
+  font-weight: 900;
+  margin-top: 0;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`
+
 
 const title = (props) => {
   return (
-    <h1 className={`${Container} ${Title} text-white text-uppercase`}>
+    <Title {...props} > 
       {props.children}
-    </h1>
+    </Title>
   )
 }
 

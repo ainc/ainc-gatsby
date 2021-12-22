@@ -3,20 +3,3 @@
 @import "../../../styles/mixins"; 
 // -----------------------------------------------------------------------------
 
-.Container {
-  margin: auto 0;
-  padding: 0;
-  text-transform: uppercase;
-  width: 90%;
-  font-size: 3.5rem;
-}
-
-.Title {
-  font-family: $heading-font;
-  @include font-size(32);
-  font-weight: 900;
-  margin-top: 0;
-  color: $black-color;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}

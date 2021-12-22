@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import {
   Container,
@@ -6,14 +6,16 @@ import {
 } from "react-bootstrap"
 import Title from "../../UI/Title/Title"
 
+export const borderColor = "white";
+
 const Bracket = styled.span`
-  width: 60%;
+  width: 100%;
   height: 250px;
-  background: white;
+  background: transparent;
   position: relative;
   margin: 20px;
-  border-right: 4px solid #B9B2C0;
-  border-left: 4px solid #B9B2C0;
+  border-right: 4px solid ${borderColor};
+  border-left: 4px solid ${borderColor};
   text-align: center;
 `
 
@@ -22,7 +24,7 @@ const LeftSpan = styled.span`
     content: '';
     width: 30%;
     height: 4px;
-    background: green;
+    background: ${borderColor};
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +33,7 @@ const LeftSpan = styled.span`
     content: '';
     width: 30%;
     height: 4px;
-    background: green;
+    background: ${borderColor};
     position: absolute;
     bottom: 0;
     left: 0;
@@ -43,7 +45,7 @@ const RightSpan = styled.span`
     content: '';
     width: 30%;
     height: 4px;
-    background: green;
+    background: ${borderColor};
     position: absolute;
     top: 0;
     right: 0;
@@ -52,26 +54,35 @@ const RightSpan = styled.span`
     content: '';
     width: 30%;
     height: 4px;
-    background: green;
+    background: ${borderColor};
     position: absolute;
     bottom: 0;
     right: 0;
   }
 `
 
+export const BorderBoxTitle = ({ children }) => <Title>{children}</Title>;
+export const BorderBoxContent = ({ children }) => <p>{children}</p>;
 
-const BorderBox = (props) => {
-  return (
-    <Container>
-      <Row>
-        <Bracket>
-          <LeftSpan />
-          <RightSpan />
-          <Title>Test</Title>
-        </Bracket>
-      </Row>
-    </Container>
-  )
+
+class BorderBox extends Component {
+
+  static Title = BorderBoxTitle;
+  static Content = BorderBoxContent;
+
+  render() {
+    return (
+      <Container>
+        <Row>
+          <Bracket>
+            <LeftSpan />
+            <RightSpan />
+            {this.props.children}
+          </Bracket>
+        </Row>
+      </Container>
+    )
+  }
 }
 
 export default BorderBox

@@ -11,7 +11,13 @@ const IndexPage = () => {
     <Layout pageTitle="Home Page">
       <BasicSlider />
       <div className="mt-5 mb-5"></div>
-      <Diagonal><BorderBox /></Diagonal>
+      <Diagonal>
+        <BorderBox>
+
+          <BorderBox.Title className="Test">Testing Title</BorderBox.Title>
+          <BorderBox.Content>Testing content here</BorderBox.Content>
+        </BorderBox>
+      </Diagonal>
     </Layout>
   )
 }

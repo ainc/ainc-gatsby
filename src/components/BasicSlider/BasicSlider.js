@@ -48,8 +48,8 @@ class BasicSlider extends React.Component {
             >
             <Wrapper>
               <Container className="mb-3">
-                <Subtitle>Join the Bootcamp</Subtitle>
-                <Title className="mb-3">Get a coding job in 16 weeks</Title>
+                <Subtitle className="text-white">Join the Bootcamp</Subtitle>
+                <Title className="mb-3 text-white">Get a coding job in 16 weeks</Title>
                 <BrandButton href="/alumni" className="mt-3">Learn More</BrandButton>
               </Container>
             </Wrapper>
@@ -65,8 +65,8 @@ class BasicSlider extends React.Component {
             >
             <Wrapper>
               <Container className="mb-3">
-                <Subtitle>Grow your startup by</Subtitle>
-                <Title className="mb-3">Joining the Fellowship Program</Title>
+                <Subtitle className="text-white">Grow your startup by</Subtitle>
+                <Title className="mb-3 text-white">Joining the Fellowship Program</Title>
                 <BrandButton href="/alumni" className="mt-3">Learn More</BrandButton>
               </Container>
             </Wrapper>
@@ -82,8 +82,8 @@ class BasicSlider extends React.Component {
             >
             <Wrapper>
               <Container className="mb-3">
-                <Subtitle>Become a member and</Subtitle>
-                <Title className="mb-3">Get your best work done here</Title>
+                <Subtitle className="text-white">Become a member and</Subtitle>
+                <Title className="mb-3 text-white">Get your best work done here</Title>
                 <BrandButton href="/alumni" className="mt-3">Learn More</BrandButton>
               </Container>
             </Wrapper>

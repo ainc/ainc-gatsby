@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components';
+import * as styles from '../../../styles/Variables';
 
 const Rotation = -5;
 const width = 100;
@@ -8,7 +9,7 @@ const fullWidth = 100;
 const RotationDeg = Rotation * (Math.PI / 180);
 const MagicNumber = Math.tan(RotationDeg) / 2;
 console.log("Magic #: " + MagicNumber);
-const SkewPadding = width * MagicNumber;
+const SkewPadding = Math.abs(width * MagicNumber);
 const ClipPadding = fullWidth * MagicNumber;
 
 const DiagonalDiv = styled.div`
@@ -22,7 +23,7 @@ const DiagonalDiv = styled.div`
     right: 0;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(45deg, #654ea3, #eaafc8); 	
+    background-color: ${styles.styles.colors.brandGreyLight};
     transform: skewY(${Rotation}deg);
     transform-origin: 50% 0;
     backface-visibility: hidden;

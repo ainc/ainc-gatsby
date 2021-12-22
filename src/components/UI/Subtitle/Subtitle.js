@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// CSS
-import { Container, Subtitle } from './Subtitle.module.scss'
+import styled from 'styled-components'
+import * as styles from '../../../styles/Variables'
+
 
 const subtitle = (props) => {
   return (
-    <h2 className={`${Container} ${Subtitle} text-white text-uppercase`}>
+    <h2 {...props}>
       {props.children}
     </h2>
   )

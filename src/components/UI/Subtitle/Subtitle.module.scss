@@ -3,17 +3,4 @@
 @import "../../../styles/mixins"; 
 // -----------------------------------------------------------------------------
 
-.Container {
-  margin: auto 0;
-  padding: 0;
-  width: 80%;
-  font-size: 1.75rem;
-}
 
-.Subtitle {
-  font-family: $base-font;
-  @include font-size(17);
-  color: $black-color;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
