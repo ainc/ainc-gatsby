@@ -16,21 +16,22 @@ import {
  } from './CardIconBG.module.scss'
 import styled from 'styled-components'
 
-export const query = graphql`
-    query  {
-        allNodeIconCardWBg {
-          nodes {
-            field_text
-          }
-        }
-      }`
-
-const CardIconBG = ({ data }) => {
-
 const CardBg = styled.div`
- background-position: center center;
- height: auto;
+    background-position: center center;
+    height: auto;
 `
+
+const CardIconBG = () => {
+
+    const data = useStaticQuery(graphql`
+        query {
+            allNodeIconCardWBg {
+                nodes {
+                    field_text
+                }
+            }
+        }`
+    )
 
     return (
         <div>{
