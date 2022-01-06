@@ -61,7 +61,7 @@ const RightSpan = styled.span`
   }
 `
 
-export const BorderBoxTitle = ({ children }) => <Title>{children}</Title>;
+export const BorderBoxTitle = ({ children }) => <Title className={children.className}>{children}</Title>;
 export const BorderBoxContent = ({ children }) => <p>{children}</p>;
 
 
