@@ -5,10 +5,16 @@ import * as styles from '../../../styles/Variables'
 
 const Title = styled.h1`
   font-family: ${styles.styles.fonts.headingFont};
-  @include font-size(32);
+  font-size: ${styles.styles.sizes.title};
   font-weight: 900;
   margin-top: 0;
-  color: black;
+  color: ${styles.styles.colors.brand2};
+  &.brand {
+    color: ${styles.styles.colors.brand};
+  }
+  &.white {
+    color: white;
+  }
   text-transform: uppercase;
   letter-spacing: 2px;
 `

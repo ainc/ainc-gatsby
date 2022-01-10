@@ -11,5 +11,12 @@ export const styles = {
     headingFont: `'Open Sans', sans-serif`,
     subheadingFont: `'Open Sans', sans-serif`,
     baseFont: `'Open Sans', sans-serif`,
+  },
+  sizes: {
+    title: `2.4rem`,
+    subtitle: `1.8rem`,
+    subtitle_small: `1.6rem`,
+    text: `1rem`,
+    text_small: `0.8rem`
   }
 }
