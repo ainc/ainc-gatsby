@@ -16,16 +16,30 @@ import {
  } from './CardIconBG.module.scss'
 import styled from 'styled-components'
 
-export const query = graphql`
-    query  {
-        allNodeIconCardWBg {
-          nodes {
-            field_text
-          }
-        }
-      }`
+const CardIconBG = () => {
 
-const CardIconBG = ({ data }) => {
+const data = useStaticQuery(graphql`
+    query {
+        allNodeIconCardWBg {
+            nodes {
+            field_text
+            relationships {
+                field_bg_ima {
+                    localFile {
+                        url
+                      }
+                }
+                field_icon {
+                    localFile {
+                        url
+                      }
+                }
+            }
+            title
+            }
+        }
+    }`
+)
 
 const CardBg = styled.div`
  background-position: center center;
@@ -33,21 +47,19 @@ const CardBg = styled.div`
 `
 
     return (
-        <div>{
+        <div class = "row">{
         data.allNodeIconCardWBg.nodes.map((node) =>(
         <Card style={{ width: '18rem' }}>
-                <CardBg>
+                <CardBg style={{ backgroundImage: `url(${node.relationships.field_bg_ima.localFile.url})` }}>
                 <Card.Body className={card, cardOverlay}>
-                    {/* <Card.Img src={cardBgData.nodeIconCardWBg.relationships.field_icon.localFile.url} className={cardIcon}/> */}
                     <Card.Header className={heading}>
-                        {/* {cardBgData.nodeIconCardWBg.title} */}
+                        {node.title}
                     </Card.Header>
                     <Card.Text className={heading__subtitle}>
                         {node.field_text}
                     </Card.Text>
-                    <Card.Text>
-                        {/* test: {cardBgData.allNodeIconCardWBg.nodes.totalCount} */}
-                    </Card.Text>
+                    <img src={node.relationships.field_icon.localFile.url}>
+                    </img>
                 </Card.Body>
                 </CardBg>        
         </Card>
@@ -56,4 +68,4 @@ const CardBg = styled.div`
     )
 }
 
-export default CardIconBG
+export default CardIconBG;
