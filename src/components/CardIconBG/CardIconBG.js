@@ -10,7 +10,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { 
     card,
     cardOverlay,
-    cardIcon,
     heading,
     heading__subtitle
  } from './CardIconBG.module.scss'
@@ -41,22 +40,10 @@ const data = useStaticQuery(graphql`
     }`
 )
 
-const CardBg = styled.div`
-    background-position: center center;
-    height: auto;
-`
-
-const CardIconBG = () => {
-
-    const data = useStaticQuery(graphql`
-        query {
-            allNodeIconCardWBg {
-                nodes {
-                    field_text
-                }
-            }
-        }`
-    )
+    const CardBg = styled.div`
+        background-position: center center;
+        height: auto;
+    `
 
     return (
         <div class = "row">{
@@ -79,5 +66,4 @@ const CardIconBG = () => {
     }</div>
     )
 }
-
 export default CardIconBG;
