@@ -11,6 +11,7 @@ const Title = styled.h1`
   color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #fff;
 `
 
 

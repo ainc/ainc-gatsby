@@ -2,8 +2,8 @@ import * as React from 'react'
 import Layout from '../components/Layout/Layout'
 import Diagonal from '../components/Layout/Diagonal/Diagonal'
 import BorderBox from '../components/Content/BorderBox/BorderBox'
-
 import BasicSlider from "../components/BasicSlider/BasicSlider"
+
 
 const IndexPage = () => {
 
