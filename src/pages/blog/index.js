@@ -3,20 +3,13 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
 import { Card, Row, Col, Container, Image } from "react-bootstrap";
 import Mail from "../../images/awesome-inc-space-banner.jpeg";
-import BlkImg from "../../images/black-img.jpeg";
-import YellowImg from "../../images/yellow-img.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./BlogPage.module.css";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-
+// import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import AuthorDetail from "./components/AuthorDetail";
 
 const BlogPage = ({ data }) => {
-
-  // const images = (data.allMdx.nodes.map())
-
-  // const authorImg = getImage()
-
   return (
     <Layout pageTitle="My Blog Posts">
       <Container>
@@ -33,30 +26,26 @@ const BlogPage = ({ data }) => {
                   <Card.Body>
                     <figure>
                       <div className={styles.containerBlogImg}>
-                        <StaticImage alt="test" image={node.frontmatter.header_img} className={styles.cardImg} />
+                        <Image alt="test" src={Mail} className={styles.cardImg} />
                         <div className={styles.shadowEffect}></div>
                       </div>
                       <div className={styles.authorSection}>
-                        <div className={styles.author}>
-                          <Image src={Mail} className={styles.authorImg} alt="fff" />
-                          <div className={styles.authorInfo}>
-                            <Card.Title className={styles.authorName}>
-                              {node.frontmatter.author}
-                            </Card.Title>
-                            <Card.Subtitle className={styles.date}>
-                              {node.frontmatter.date}
-                            </Card.Subtitle>
-                          </div>
-                        </div>
+                        <AuthorDetail
+                          date={node.frontmatter.date}
+                          author={node.frontmatter.author ? node.frontmatter.author : "Awesome Inc"}
+                          imgClass={styles.authorImg}
+                          subClass={styles.date}
+                        />
                       </div>
                     </figure>
                     <Card.Title className={styles.blogTitle}>
                       <Link className={styles.blogTitleLink} to={`/blog/${node.slug}`}>
-                        {/* {node.frontmatter.title} */}
-                        {node.frontmatter.author_img}
+                        {node.frontmatter.title}
+                        {/* {node.frontmatter.author_img} */}
                       </Link>
                     </Card.Title>
                     <p className={styles.blogDescription}>{node.frontmatter.description}</p>
+
                     <Link className={styles.blogLink} to={`/blog/${node.slug}`}>
                       <span>Read More</span>
                       <FontAwesomeIcon className={styles.blogArrow} icon={faArrowRight} />
@@ -90,5 +79,29 @@ export const query = graphql`
     }
   }
 `;
+
+// query MyQuery {
+//   allNodeBlogPosts {
+//     nodes {
+//       title
+//       created(formatString: "MMM  DD, YYYY")
+//       relationships {
+//         field_author {
+//           display_name
+//         }
+//         field_preview_image {
+//           localFile {
+//             childImageSharp {
+//               gatsbyImageData(layout: CONSTRAINED)
+//             }
+//           }
+//         }
+//       }
+//       body {
+//         value
+//       }
+//     }
+//   }
+// }
 
 export default BlogPage;

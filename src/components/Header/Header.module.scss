@@ -13,3 +13,14 @@
     -0.5px 0.5px white,
     0.5px -0.5px white;
 }
+
+.gatsbyLinks {
+  text-decoration: none;
+  color: #000;
+}
+.gatsbyLinks:hover {
+  color: #000;
+}
+.gatsbyLinks:focus {
+  color: rgb(255, 255, 255);
+}

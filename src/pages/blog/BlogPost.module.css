@@ -1,0 +1,23 @@
+.blog-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 39px;
+  line-height: 58.5px;
+  font-weight: 900;
+  margin-top: 0;
+  color: #323333;
+  text-transform: capitalize;
+}
+
+.mdx {
+  margin-bottom: 70px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+

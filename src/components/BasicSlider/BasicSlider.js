@@ -5,12 +5,12 @@ import Wrapper from "../UI/Wrapper/Wrapper";
 import Title from "../UI/Title/Title";
 import Subtitle from "../UI/Subtitle/Subtitle";
 import BrandButton from "../BrandButton/BrandButton"
-import { ButtonContainer } from "./BasicSlider.module.scss"
-import { Container, Row, Col, Button, Overlay } from "react-bootstrap"
+// import { ButtonContainer } from "./BasicSlider.module.scss"
+import { Container} from "react-bootstrap"
 
 
 // Images
-const bogliasco = "https://i.imgur.com/Gu5Cznz.jpg";
+// const bogliasco = "https://i.imgur.com/Gu5Cznz.jpg";
 const countyClare = "https://i.imgur.com/idjXzVQ.jpg";
 const craterRock = "https://i.imgur.com/8DYumaY.jpg";
 const giauPass = "https://i.imgur.com/8IuucQZ.jpg";

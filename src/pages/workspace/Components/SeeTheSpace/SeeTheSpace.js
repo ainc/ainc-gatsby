@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as styles from "../../workspace.module.css";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import ModalCustom from "../../../../components/Modal/ModalCustom";
@@ -38,7 +38,7 @@ const SeeTheSpace = (props) => {
                 </i>
               </a>
               {/* Tour Btn. Provide link to tour modal */}
-              <a onClick={handleShow} className={styles.tourBtn}>
+              <a href="/#" role="button" onClick={handleShow} className={styles.tourBtn}>
                 <Image className={styles.tourIcon} src={TourBtn} />
               </a>
             </div>

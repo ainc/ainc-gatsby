@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Modal, Button, CloseButton, Row, Container } from "react-bootstrap";
+import React from "react";
+import { Modal, CloseButton, Row, Container } from "react-bootstrap";
 import * as styles from "./Modal.module.css";
 
 /*In order to use the ModalCustom Component (it was renamed to ModalCustom because Modal is a saved component name for react-bootstrap), state must be imported to whatever component it is used in:
@@ -14,14 +14,12 @@ MUST HAVE: Add an onClick event to where you want the Modal to render which you 
 */
 
 const ModalCustom = (props) => {
-
   return (
     <div>
-
       <Modal
         size="lg"
         show={props.lgShow}
-        onHide={props.hide} 
+        onHide={props.hide}
         aria-labelledby="example-modal-sizes-title-lg"
         backdropClassName={styles.modal}
         contentClassName={styles.modal}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout/Layout";
-import { graphql } from "gatsby";
+// import { graphql } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import * as styles from "./workspace.module.css";
 import MemberOption from "../../components/MemberOptions/memberOptions";
@@ -118,7 +118,7 @@ const WorkspacePage = () => {
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 9, offset: 2 }}>
               <Row>
                 {/* Various Amenities */}
-                <Col className={styles.width} md={6} sm={12}>
+                <Col md={6} sm={12}>
                   <Amenities
                     info="Secure Wi-Fi, Gigabit Internet"
                     imgSrc={Wifi}
@@ -180,17 +180,10 @@ const WorkspacePage = () => {
           <Container fluid>
             <Row>
               <Col>
-                <a onClick={handleShow}>
+                <a href="/#" onClick={handleShow}>
                   <Button className={styles.btnCustom}>Schedule A Tour</Button>
                 </a>
               </Col>
-
-              <ModalCustom lgShow={lgShow} hide={handleClose}>
-                <Col>
-                  <label>Label test</label>
-                  <input></input>
-                </Col>
-              </ModalCustom>
 
               <ModalCustom lgShow={lgShow} hide={handleClose}>
               </ModalCustom>
