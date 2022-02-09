@@ -4,13 +4,13 @@ import * as styles from '../../../styles/Variables';
 
 const Rotation = -5;
 const width = 100;
-// const fullWidth = 100;
+const fullWidth = 100;
 // const MagicNumber = 0.09719;
 const RotationDeg = Rotation * (Math.PI / 180);
 const MagicNumber = Math.tan(RotationDeg) / 2;
 console.log("Magic #: " + MagicNumber);
 const SkewPadding = Math.abs(width * MagicNumber);
-// const ClipPadding = fullWidth * MagicNumber;
+const ClipPadding = fullWidth * MagicNumber;
 
 const DiagonalDiv = styled.div`
   position: relative;

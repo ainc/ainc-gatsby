@@ -1,14 +1,20 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import "./header.scss";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import * as React from 'react'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import styled from "styled-components"
+import "./header.scss"
+import { 
+  Navbar,
+  Nav,
+  NavDropdown,
+  Container
+} from 'react-bootstrap'
 
-import { navbarBrand, gatsbyLinks } from "./Header.module.scss";
+import { 
+  navbarBrand,
+  NavLinks
+} from './Header.module.scss'
 
-// const NavbarBrand = styled.link`
-//   line-height: 1.75rem;
-// `
 
 const Header = () => {
   const logo_height = 30;
@@ -25,7 +31,7 @@ const Header = () => {
             className="d-inline-block align-top"
             alt="Awesome Inc Logo"
             loading="eager"
-          />{" "}
+          />
           Awesome Inc
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -51,7 +57,7 @@ const Header = () => {
             </NavDropdown>
             <NavDropdown title="Workspace" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <Link className={gatsbyLinks} to="/workspace/">Workspace</Link>
+                <Link className={NavLinks} to="/workspace/">Workspace</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.2">Schedule a Tour</NavDropdown.Item>
@@ -67,7 +73,7 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.2">About</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Core Values</NavDropdown.Item>
               <NavDropdown.Item>
-                <Link className={gatsbyLinks} to="/blog/">Blog</Link>
+                <Link className={NavLinks} to="/blog/">Blog</Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Press</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Careers</NavDropdown.Item>

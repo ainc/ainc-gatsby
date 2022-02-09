@@ -14,13 +14,13 @@
     0.5px -0.5px white;
 }
 
-.gatsbyLinks {
+.NavLinks {
   text-decoration: none;
   color: #000;
-}
-.gatsbyLinks:hover {
-  color: #000;
-}
-.gatsbyLinks:focus {
-  color: rgb(255, 255, 255);
+  &:hover {
+    color: #000;
+  }
+  &:focus {
+    color: rgb(255, 255, 255);
+  }
 }
