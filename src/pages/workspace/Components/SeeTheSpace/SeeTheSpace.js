@@ -38,17 +38,13 @@ const SeeTheSpace = (props) => {
                 </i>
               </a>
               {/* Tour Btn. Provide link to tour modal */}
-              <a href="/#" role="button" onClick={handleShow} className={styles.tourBtn}>
+              <a role="button" onClick={handleShow} className={styles.tourBtn}>
                 <Image className={styles.tourIcon} src={TourBtn} />
               </a>
             </div>
           </div>
         </Col>
         <Col>
-          <ModalCustom lgShow={lgShow} hide={handleClose}>
-
-
-          </ModalCustom>
           <ModalCustom lgShow={lgShow} hide={handleClose}>
 
 

@@ -29,7 +29,6 @@ const WorkspacePage = () => {
   const [lgShow, setLgShow] = useState(false);
   const handleClose = () => setLgShow(false);
   const handleShow = () => setLgShow(true);
-  
 
   return (
     <Layout pageTitle="Workspace">
@@ -180,9 +179,9 @@ const WorkspacePage = () => {
           <Container fluid>
             <Row>
               <Col>
-                <a href="/#" onClick={handleShow}>
-                  <Button className={styles.btnCustom}>Schedule A Tour</Button>
-                </a>
+                <Button onClick={handleShow} className={styles.btnCustom}>
+                  Schedule A Tour
+                </Button>
               </Col>
 
               <ModalCustom lgShow={lgShow} hide={handleClose}>
