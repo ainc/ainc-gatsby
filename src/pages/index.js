@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout/Layout'
 import Diagonal from '../components/Layout/Diagonal/Diagonal'
 import BorderBox from '../components/Content/BorderBox/BorderBox'
+<<<<<<< HEAD
 import { StaticImage } from 'gatsby-plugin-image'
 import Button from 'react-bootstrap/Button'
 import HeroSlider, {
@@ -10,8 +11,11 @@ import HeroSlider, {
 } from 'hero-slider'
 import EventCard from '../components/EventCard/EventCard'
 
+=======
+>>>>>>> Dalton2021/blogPosts
 import BasicSlider from "../components/BasicSlider/BasicSlider"
 import CardIconBG from '../components/CardIconBG/CardIconBG'
+
 
 const IndexPage = () => {
 
