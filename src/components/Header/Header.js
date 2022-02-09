@@ -12,7 +12,7 @@ import {
 
 import { 
   navbarBrand,
-  NavLinks
+  NavLink
 } from './Header.module.scss'
 
 
@@ -57,7 +57,7 @@ const Header = () => {
             </NavDropdown>
             <NavDropdown title="Workspace" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <Link className={NavLinks} to="/workspace/">Workspace</Link>
+                <Link className={NavLink} to="/workspace/">Workspace</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.2">Schedule a Tour</NavDropdown.Item>
@@ -73,7 +73,7 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.2">About</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Core Values</NavDropdown.Item>
               <NavDropdown.Item>
-                <Link className={NavLinks} to="/blog/">Blog</Link>
+                <Link className={NavLink} to="/blog/">Blog</Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Press</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Careers</NavDropdown.Item>
