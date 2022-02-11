@@ -24,8 +24,9 @@ const Layout = ({ pageTitle, children }) => {
       <GlobalStyle />
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <Header />
-        
-      {children}
+        <div style={{paddingTop: 78 + 'px'}}>
+          {children}
+        </div>
       
     </div>
   )

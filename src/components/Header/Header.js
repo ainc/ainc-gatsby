@@ -46,9 +46,8 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.4">Bootcamp</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Startups" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Startups</NavDropdown.Item>
+              <NavDropdown.Item href="/fellowship">Startups</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.1">Startups</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">I Have an Idea</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Startup Accelerator</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">5 Across</NavDropdown.Item>

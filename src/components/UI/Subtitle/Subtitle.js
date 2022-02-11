@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import styled from 'styled-components'
-// import * as styles from '../../../styles/Variables'
+import styled from 'styled-components'
+import * as styles from '../../../styles/Variables'
 
 const Subtitle = styled.h2`
   font-family: ${styles.styles.fonts.headingFont};

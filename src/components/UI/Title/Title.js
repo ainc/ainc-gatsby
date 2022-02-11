@@ -17,7 +17,6 @@ const Title = styled.h1`
   }
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
 `
 
 
