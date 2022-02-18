@@ -29,7 +29,6 @@ const IndexPage = () => {
         </BorderBox>
       </Diagonal>
       
-      <CardIconBG />
     </Layout>
 
   )
