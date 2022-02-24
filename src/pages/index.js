@@ -11,7 +11,6 @@ import HeroSlider, {
 import EventCard from '../components/EventCard/EventCard'
 
 import BasicSlider from "../components/BasicSlider/BasicSlider"
-import CardIconBG from '../components/CardIconBG/CardIconBG'
 
 
 const IndexPage = () => {

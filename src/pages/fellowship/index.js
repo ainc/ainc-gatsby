@@ -3,10 +3,19 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout/Layout'
 import { Container, Row, Col } from 'react-bootstrap'
 import { StaticImage } from 'gatsby-plugin-image'
+import PerksIcon from '/src/assets/svg/perks.svg'
+import PortfolioIcon from '/src/assets/svg/portfolio.svg'
+import MentorsIcon from '/src/assets/svg/mentors.svg'
 import Title from '../../components/UI/Title/Title'
 import Subtitle from '../../components/UI/Subtitle/Subtitle'
 import BrandButton from "../../components/UI/BrandButton/BrandButton"
 import "../../styles/main.scss"
+
+/**
+ * 
+ * TODO:
+ * Fix SVG icons, for whatever reason, some of the elements are not displaying colors correctly
+ */
 
 const FellowshipPage = ({ data }) => {
   return (
@@ -22,6 +31,7 @@ const FellowshipPage = ({ data }) => {
           </Col>
           <Col className="" xs={12} sm={8}>
             <StaticImage src="../../images/brainstorming.jpg" width='375px' className='position-relative'/>
+            
           </Col>
         </Row>
       </Container>
@@ -38,25 +48,44 @@ const FellowshipPage = ({ data }) => {
         </Row>
       </Container>
 
-      {/* perks */}
+      {/* perks, portfolio and mentors */}
       <Container>
         <Row>
           <Col className="mx-auto my-5" xs={12} sm={{ offset: 1, span: 10}} md={{ offset: 3, span: 6}}>
             <Row>
               <Col xs={4} className='px-5'>
-                <StaticImage src="../../images/perks.png" />
+                <PerksIcon />
                 <Title className='text-center fs-3 mt-3'>Perks</Title>
               </Col>
               <Col xs={4} className='px-5'>
-                <StaticImage src="../../images/portfolio.png" />
+                <PortfolioIcon />
                 <Title className='text-center fs-3 mt-3'>Portfolio</Title>
               </Col>
               <Col xs={4} className='px-5'>
-                <StaticImage src="../../images/mentors.png" />
+                <MentorsIcon />
                 <Title className='text-center fs-3 mt-3'>Mentors</Title>
               </Col>
             </Row>
-            
+          </Col>
+        </Row>
+      </Container>
+
+      <Container>
+        <Row className="mb-5">
+          <Col className="d-flex justify-content-center">
+            <BrandButton>Apply Now</BrandButton>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container>
+        <Row className="my-5">
+          <Col xs={8} sm={6}>
+            <StaticImage src="../../images/fellowship-video-macbook.png" classname="position-relative" />
+          </Col>
+          <Col xs={4} sm={6}>
+            <Title>How it Works</Title>
+            <StaticImage src="../../images/arrow-red.png" />
           </Col>
         </Row>
       </Container>
