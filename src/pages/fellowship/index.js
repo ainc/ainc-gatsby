@@ -11,13 +11,53 @@ import Subtitle from '../../components/UI/Subtitle/Subtitle'
 import BrandButton from "../../components/UI/BrandButton/BrandButton"
 import "../../styles/main.scss"
 
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from 'keen-slider/react'
+
 /**
- * 
  * TODO:
  * Fix SVG icons, for whatever reason, some of the elements are not displaying colors correctly
  */
 
 const FellowshipPage = ({ data }) => {
+
+  const [refCallback, slider, sliderNode] = useKeenSlider(
+    {
+      rtl: true,
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 5000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
+  )
+
   return (
     <Layout pageTitle="Fellowship">
       
@@ -30,7 +70,7 @@ const FellowshipPage = ({ data }) => {
             <BrandButton className="my-3">Apply Now</BrandButton>
           </Col>
           <Col className="" xs={12} sm={8}>
-            <StaticImage src="../../images/brainstorming.jpg" width='375px' className='position-relative'/>
+            <StaticImage src="../../images/brainstorming.jpg" width='375px' className='position-relative' alt="people brainstorming"/>
             
           </Col>
         </Row>
@@ -78,14 +118,51 @@ const FellowshipPage = ({ data }) => {
         </Row>
       </Container>
 
+      {/* how it works */}
       <Container>
         <Row className="my-5">
           <Col xs={8} sm={6}>
-            <StaticImage src="../../images/fellowship-video-macbook.png" classname="position-relative" />
+            <StaticImage src="../../images/fellowship-video-macbook.png" className="position-relative" alt="Macbook with video"/>
           </Col>
           <Col xs={4} sm={6}>
             <Title>How it Works</Title>
-            <StaticImage src="../../images/arrow-red.png" />
+            <StaticImage src="../../images/arrow-red.png" alt="red arrow"/>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* testimonials */}
+      <Container fluid className="background--grey">
+        <Row className="my-5">
+          <Col xs={12} className="m-auto">
+            <Container className="double-border--brand my-5">
+              <div ref={refCallback} className="keen-slider d-flex align-items-center">
+                <div class="keen-slider__slide">
+                  <p className="text-center text--white mb-1 mt-3">
+                    Our company took advantage of all of the services. They were incredibly helpful and well-timed for us.
+                  </p>
+                  <p className='text-center fst-italic text--grey mb-3'>
+                    Kirsten Moorefield
+                  </p>
+                </div>
+                <div class="keen-slider__slide">
+                  <p className="text-center text--white mb-1 mt-3">
+                    The Fellowship Program has been an incredible resource in Kentucky as WeatherCheck grows. Our team utilized many of the resources offered while we were in the program.
+                  </p>
+                  <p className='text-center fst-italic text--grey mb-3'>
+                    Demetrius Gray
+                  </p>
+                </div>
+                <div class="keen-slider__slide">
+                  <p className='text-center text--white mb-1 mt-3'>
+                    The network I've developed through the Fellowship program includes some of my most trusted advisors as well as my lead investors.
+                  </p>
+                  <p className='text-center fst-italic text--grey mb-3'>
+                    Josh Lau
+                  </p>
+                </div>
+              </div>
+            </Container>
           </Col>
         </Row>
       </Container>

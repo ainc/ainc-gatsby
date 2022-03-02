@@ -1,3 +1,16 @@
-.text-normal {
-  text-transform: none !important;
+
+.double-border--brand {
+  position: relative;
+  border-right: 2px $brand-color solid;
+    border-left: 2px $brand-color solid;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    right: 5px;
+    bottom: 0px;
+    border-right: 2px $brand-color solid;
+    border-left: 2px $brand-color solid;
+  }
 }
