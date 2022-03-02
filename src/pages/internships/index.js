@@ -10,6 +10,8 @@ import Subtitle from '../../components/UI/Subtitle/Subtitle'
 import BrandButton from '../../components/UI/BrandButton/BrandButton'
 import '../../styles/main.scss'
 
+import oreo from '/src/images/oreo-trail.png';
+
 const InternshipsPage = ({ data }) => {
 
   // Review layouts of Header, Why, then continue from Why Join
@@ -41,19 +43,20 @@ const InternshipsPage = ({ data }) => {
       </Container>
 
       {/* Why section - diagonal & BG image */}
-      {/* <Diagonal bgImage='../../oreo-trail.png' /> */}
-      <Container fluid className='my-5' style={{backgroundColor:'#B00000'}}>
-        <Container>
-          <Row>
-            <Col md={8}> {/* className='text-center text-md-start' */}
-              <Title className='text-white my-5'>ABOUT TEAM ALPHA</Title>
-              <p className='text-white my-5'>
-                Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
-              </p>
-            </Col>
-          </Row>
+      <Diagonal bgImage={{ oreo }}>
+        <Container fluid className='my-5' style={{backgroundColor:'#B00000'}}>
+          <Container>
+            <Row>      
+              <Col md={8}> {/* className='text-center text-md-start' */}
+                <Title className='text-white my-5'>ABOUT TEAM ALPHA</Title>
+                <p className='text-white my-5'>
+                  Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
+                </p>
+              </Col>
+            </Row>
+          </Container>
         </Container>
-      </Container>
+      </Diagonal>
 
       {/* Teams section - team components */}
       <Container className='my-5'>
@@ -64,7 +67,7 @@ const InternshipsPage = ({ data }) => {
           <Col sm md={4}>
             {/* Video */}
             {/* <Subtitle className='text-center text-uppercase text-white fs-4 fw-bold bg-dark py-2'>Video</Subtitle> */}
-            <TeamButton imgSrc='../../images/oreo-trail.png' imgAlt='this should work'>Events + Marketing</TeamButton>
+            {/* <TeamButton imgSrc='../../images/oreo-trail.png' imgAlt='this should work'>Events + Marketing</TeamButton> */}
           </Col>
           <Col sm md={4}>
             {/* Development */}
