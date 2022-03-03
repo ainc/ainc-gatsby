@@ -10,7 +10,7 @@ import Subtitle from '../../components/UI/Subtitle/Subtitle'
 import BrandButton from '../../components/UI/BrandButton/BrandButton'
 import '../../styles/main.scss'
 
-import oreo from '/src/images/oreo-trail.png';
+import internWhy from '/src/images/intern-why.jpg';
 
 const InternshipsPage = ({ data }) => {
 
@@ -42,19 +42,17 @@ const InternshipsPage = ({ data }) => {
         </Row>
       </Container>
 
-      {/* Why section - diagonal & BG image */}
-      <Diagonal bgImage={{ oreo }}>
-        <Container fluid className='my-5' style={{backgroundColor:'#B00000'}}>
-          <Container>
-            <Row>      
-              <Col md={8}> {/* className='text-center text-md-start' */}
-                <Title className='text-white my-5'>ABOUT TEAM ALPHA</Title>
-                <p className='text-white my-5'>
-                  Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
-                </p>
-              </Col>
-            </Row>
-          </Container>
+      {/* Why section - remove dotted border? */}
+      <Diagonal bgImage={{internWhy}}>
+        <Container>
+          <Row>      
+            <Col md={8}> {/* className='text-center text-md-start' */}
+              <Title className='text-white my-5'>ABOUT TEAM ALPHA</Title>
+              <p className='text-white my-5'>
+                Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
+              </p>
+            </Col>
+          </Row>
         </Container>
       </Diagonal>
 
