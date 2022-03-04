@@ -38,7 +38,7 @@ const WorkspacePage = () => {
           <Container>
             <Row>
               <Col className={` ${styles.lgxHeadingArea} ${styles.lgxHeading} `}>
-                <Title className={`${styles.headingTitle} ${styles.extraBold}`}>Workspace</Title>
+                <Title className={`${styles.headingTitle} ${styles.extraBold} text-white`}>Workspace</Title>
                 <h4 className={styles.headingSubtitle}>
                   <i>Get your best work done here.</i>
                 </h4>

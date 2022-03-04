@@ -15,9 +15,9 @@ const Header = () => {
   const logo_width = 30;
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="/" className={`w-100 text-uppercase ${navbarBrand}`}>
+    <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
+      <Container >
+        <Navbar.Brand href="/" className={`text-uppercase ${navbarBrand}`}>
           <StaticImage
             src="../../images/logo.png"
             width={logo_width}
@@ -30,7 +30,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav>
             <NavDropdown title="Learn to Code" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Learn to Code</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -51,7 +51,9 @@ const Header = () => {
             </NavDropdown>
             <NavDropdown title="Workspace" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <Link className={gatsbyLinks} to="/workspace/">Workspace</Link>
+                <Link className={gatsbyLinks} to="/workspace/">
+                  Workspace
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.2">Schedule a Tour</NavDropdown.Item>
@@ -67,7 +69,9 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.2">About</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Core Values</NavDropdown.Item>
               <NavDropdown.Item>
-                <Link className={gatsbyLinks} to="/blog/">Blog</Link>
+                <Link className={gatsbyLinks} to="/blog/">
+                  Blog
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Press</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Careers</NavDropdown.Item>
