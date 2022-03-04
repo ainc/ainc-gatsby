@@ -182,7 +182,7 @@ const AboutPage = ({ data }) => {
               <Col md={{ span: 10, offset: 2 }}>
                 <Row>
                   {data.allNodeTeamMember.nodes.map((node) => (
-                    <Col
+                    <Col 
                       sm={6}
                       md={3}
                       lg={2}
