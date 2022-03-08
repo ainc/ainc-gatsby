@@ -38,7 +38,6 @@ const ContentDiv = styled.div`
   margin: 0 auto;
   padding: 1.5em;
   position: relative;
-  border: 2px dashed;
 `
 const Diagonal = (props) => {
   return (

@@ -11,7 +11,7 @@
 }
 
 @mixin screen-sm {  /* 480 - 767 */
-  @media (min-width: #{screen-xs}) and (max-width: #{$screen-sm - 1px}) {
+  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-sm - 1px}) {
     @content;
   }
 }
