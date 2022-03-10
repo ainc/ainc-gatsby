@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+a {
+  color: $brand-grey;
+  text-decoration: none;
+  &:hover {
+    color: $white-color;
+  }
+}
+
+.footer-background {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: $brand-color2;
+  color: $brand-grey;
+}
+
+.logo-gap {
+  margin-bottom: 3.9rem;
+  width:55%;
+}
+
+.info-list-title {
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: $white-color;
+}
+.info-list .main-line {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.info-list {
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+.info-list .red-icon {
+  margin-right: 10px;
+  color: $brand-color;
+}
+
+.sponsors-row {
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.copyright-inline-list {
+  padding-left: 0px;
+}
+.copyright-inline-list li {
+  display: inline;
+  padding: 0px 5px;
+  font-size: 0.8rem;
+  color: $white-color;
+  &:hover {
+    color: $brand-color;
+  }
+}
