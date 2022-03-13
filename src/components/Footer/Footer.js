@@ -1,152 +1,144 @@
 import * as React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'gatsby'
-import { graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import BrandButton from '../UI/BrandButton/BrandButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faClock } from '@fortawesome/free-solid-svg-icons'
-// import { faTwitter, faFacebookF, faLinkedinIn, faInstagram, faYoutube } from '@fortawsome/free-brands-svg-icons'
+import { faTwitter, faFacebookF, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import * as styles from './Footer.module.scss'
 
-const Footer = ({ data }) => {
+const Footer = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      allNodeFooterQuicklink {
+        nodes {
+          field_link {
+            title
+            uri
+          }
+        }
+      }
+    }
+  `)
+
   return(
     <Container fluid className={styles.footerBackground}>
       <Container>
-      
+
         <Row>
+          {/* Main column */}
           <Col xs md={4}>
             <Row className='justify-content-center'>
-              <a className={styles.logoGap} href='/'>
+              <Link className={styles.aincLogoGap} href='/'>
                 <StaticImage src='../../images/ainc-logo-text-triangle-layer-red.png' alt="Awesome Inc logo" />
-              </a>
+              </Link>
             </Row>
-            <Row>
-              <adress>
-                <ul className={styles.infoList}>
-                  <li className={styles.mainLine}>
-                    348 E Main St, Lexington, KY
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className={styles.redIcon} icon={faEnvelope} />
-                    <Link to='mailto:info@awesomeinc.org'>info@awesomeinc.org</Link>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className={styles.redIcon} icon={faPhone} />
-                    <Link to='tel:8599604600'>859.960.4600</Link>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon className={styles.redIcon} icon={faClock} />
-                    Hours: Mon-Fri, 9am-5pm
-                  </li>
-                </ul>
-              </adress>
+            <Row className={styles.firstColRow}>
+              <ul className={styles.infoList}>
+                <li className={styles.mainLine}>
+                  348 E Main St, Lexington, KY
+                </li>
+                <li>
+                  <FontAwesomeIcon className={styles.redIcon} icon={faEnvelope} />
+                  <Link to='mailto:info@awesomeinc.org'>info@awesomeinc.org</Link>
+                </li>
+                <li>
+                  <FontAwesomeIcon className={styles.redIcon} icon={faPhone} />
+                  <Link to='tel:8599604600'>859.960.4600</Link>
+                </li>
+                <li>
+                  <FontAwesomeIcon className={styles.redIcon} icon={faClock} />
+                  Hours: Mon-Fri, 9am-5pm
+                </li>
+              </ul>
             </Row>
-            <Row>
-              <Col>
-                <BrandButton>Newsletter Sign Up</BrandButton>
-              </Col>
+            <Row className={styles.firstColRow}>
+              <BrandButton>Newsletter Sign Up</BrandButton>
             </Row>
           </Col>
+
+          {/* Quicklinks column */}
           <Col xs={6} sm={6} md={2}>
             <h2 className={styles.infoListTitle}>Quicklinks</h2>
             <ul className={styles.infoList}>
-              {/* <li><a href='/'>Careers</a></li>
-              <li><a href='/'>Core Values</a></li>
-              <li><a href='/'>Our Blog</a></li>
-              <li><a href='/'>Programs & Events</a></li>
-              <li><a href='/'>Innovation Incubated</a></li>
-              <li><a href='/'>Community Yearbook</a></li>
-              <li><a href='/'>Press</a></li>
-              <li><a href='/'>Contact Us</a></li>
-              <li><a href='/'>Internships</a></li>
-              <li><a href='/'>Schedule a Tour</a></li>
-              <li><a href='/'>Rent Space</a></li>
-              <li><a href='/'>Parking</a></li>
-              <li><a href='/'>Map</a></li> */}
               {
                 data.allNodeFooterQuicklink.nodes.map((node) => (
-                  <li><a href={node.field_link.uri}>{node.field_link.title}</a></li>
+                  <li><Link href={node.field_link.uri.startsWith("internal:") ? node.field_link.uri.slice(9) : node.field_link.uri}>
+                    {node.field_link.title}
+                  </Link></li>
                 ))
               }
             </ul>
           </Col>
+
+          {/* Courses column */}
           <Col xs={6} sm={6} md={2}>
             <h2 className={styles.infoListTitle}>Courses</h2>
             <ul className={styles.infoList}>
-              <li><a href='/'>Bootcamp</a></li>
-              <li><a href='/'>Coding Club</a></li>
-              <li><a href='/'>Week of Code</a></li>
-              <li><a href='/'>Intro to Web Dev</a></li>
+              <li><Link href='/'>Bootcamp</Link></li>
+              <li><Link href='/'>Coding Club</Link></li>
+              <li><Link href='/'>Week of Code</Link></li>
+              <li><Link href='/'>Intro to Web Dev</Link></li>
             </ul>
           </Col>
+
+          {/* Sponsors column */}
           <Col xs sm={6} md={4}>
             <h2 className={styles.infoListTitle}>Sponsors</h2>
             <Row className={styles.sponsorsRow}>
               <Col xs={6}>
-                <a href='https://www.windstream.net/'>
+                <Link href='https://www.windstream.net/'>
                   <StaticImage src='../../images/kinetic-logo.png' alt="Kinetic by Windstream sponsor" />
-                </a>
+                </Link>
               </Col>
               <Col xs={6}>
-                <a href='https://apaxsoftware.com/'>
+                <Link href='https://apaxsoftware.com/'>
                   <StaticImage src='../../images/apax-software-logo.png' alt="APAX Software sponsor" />
-                </a>
+                </Link>
               </Col>
             </Row>
             <Row className={styles.sponsorsRow}>
               <Col xs={6}>
-                <a href='https://www.thinkkentucky.com/'>
+                <Link href='https://www.thinkkentucky.com/'>
                   <StaticImage src='../../images/ky-innovation-logo.png' alt="Think KY sponsor" />
-                </a>
+                </Link>
               </Col>
               <Col xs={6}>
-                <a href='https://www.commercelexington.com/'>
+                <Link href='https://www.commercelexington.com/'>
                   <StaticImage src='../../images/commerce-lexington-logo.png' alt="Commerce Lexington sponsor" />
-                </a>
+                </Link>
               </Col>
             </Row>
           </Col>
         </Row>
-      
+
+        {/* Bottom row */}
+        <Row className={styles.bottomRow}>
+          <Col>
+            <ul className={styles.copyrightInlineList}>
+              <li><Link to='/'>About</Link></li>
+              <li><Link to='/'>Careers</Link></li>
+              <li><Link to='/'>Privacy Policy</Link></li>
+              <li><Link to='/'>Terms of Service</Link></li>
+            </ul>
+          </Col>
+          <Col>
+            <ul className={styles.socialsInlineList}>
+              <li><Link to='https://twitter.com/awesomeinclex'><FontAwesomeIcon icon={faTwitter} /></Link></li>
+              <li><Link to='https://www.facebook.com/awesomeinclex'><FontAwesomeIcon icon={faFacebookF} /></Link></li>
+              <li><Link to='https://www.linkedin.com/school/awesome-inc/'><FontAwesomeIcon icon={faLinkedinIn} /></Link></li>
+              <li><Link to='https://www.instagram.com/awesomeinclex/'><FontAwesomeIcon icon={faInstagram} /></Link></li>
+              <li><Link to='https://www.youtube.com/user/AincTelevision/featured'><FontAwesomeIcon icon={faYoutube} /></Link></li>
+            </ul>
+          </Col>
+        </Row>
+
       </Container>
-
-      <Row>
-        <Col>
-          <ul className={styles.copyrightInlineList}>
-            <li><a href='/'>About</a></li>
-            <li><a href='/'>Careers</a></li>
-            <li><a href='/'>Privacy Policy</a></li>
-            <li><a href='/'>Terms of Service</a></li>
-          </ul>
-        </Col>
-        <Col>
-          <ul className={styles.copyrightInlineList}>
-            {/* <li><a href='/'><FontAwesomeIcon icon={faTwitter} /></a></li>
-            <li><a href='/'><FontAwesomeIcon icon={faFacebookF} /></a></li>
-            <li><a href='/'><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
-            <li><a href='/'><FontAwesomeIcon icon={faInstagram} /></a></li>
-            <li><a href='/'><FontAwesomeIcon icon={faYoutube} /></a></li> */}
-          </ul>
-        </Col>
-      </Row>
-
     </Container>
   )
 }
-
-export const query = graphql`
-  query {
-    allNodeFooterQuicklink {
-      nodes {
-        field_link {
-          title
-          uri
-        }
-      }
-    }
-  }
-`
-
 
 export default Footer
