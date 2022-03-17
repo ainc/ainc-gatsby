@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Link } from 'gatsby'
-import { useStaticQuery, graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 import BrandButton from '../UI/BrandButton/BrandButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faClock } from '@fortawesome/free-solid-svg-icons'
@@ -18,6 +17,37 @@ const Footer = () => {
           field_link {
             title
             uri
+          }
+        }
+      }
+      allNodeFooterCourse {
+        nodes {
+          field_link {
+            title
+            uri
+          }
+        }
+      }
+      allNodeFooterSponsor {
+        nodes {
+          field_sponsor_link {
+            uri
+          }
+          relationships {
+            field_sponsor_image {
+              relationships {
+                field_media_image {
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+              field_media_image {
+                alt
+              }
+            }
           }
         }
       }
@@ -78,10 +108,13 @@ const Footer = () => {
           <Col xs={6} sm={6} md={2}>
             <h2 className={styles.infoListTitle}>Courses</h2>
             <ul className={styles.infoList}>
-              <li><Link href='/'>Bootcamp</Link></li>
-              <li><Link href='/'>Coding Club</Link></li>
-              <li><Link href='/'>Week of Code</Link></li>
-              <li><Link href='/'>Intro to Web Dev</Link></li>
+              {
+                data.allNodeFooterCourse.nodes.map((node) => (
+                  <li><Link href={node.field_link.uri.startsWith("internal:") ? node.field_link.uri.slice(9) : node.field_link.uri}>
+                    {node.field_link.title}
+                  </Link></li>
+                ))
+              }
             </ul>
           </Col>
 
@@ -89,29 +122,21 @@ const Footer = () => {
           <Col xs sm={6} md={4}>
             <h2 className={styles.infoListTitle}>Sponsors</h2>
             <Row className={styles.sponsorsRow}>
-              <Col xs={6}>
-                <Link href='https://www.windstream.net/'>
-                  <StaticImage src='../../images/kinetic-logo.png' alt="Kinetic by Windstream sponsor" />
-                </Link>
-              </Col>
-              <Col xs={6}>
-                <Link href='https://apaxsoftware.com/'>
-                  <StaticImage src='../../images/apax-software-logo.png' alt="APAX Software sponsor" />
-                </Link>
-              </Col>
+              {
+                data.allNodeFooterSponsor.nodes.map((node) => (
+                  <Col xs={6}>
+                    <Link href={node.field_sponsor_link.uri}>
+                      <GatsbyImage className='my-2'
+                        image={getImage(node.relationships.field_sponsor_image.relationships.field_media_image.localFile)}
+                        alt={node.relationships.field_sponsor_image.field_media_image.alt}
+                      />
+                    </Link>
+                  </Col>
+                ))
+              }
             </Row>
-            <Row className={styles.sponsorsRow}>
-              <Col xs={6}>
-                <Link href='https://www.thinkkentucky.com/'>
-                  <StaticImage src='../../images/ky-innovation-logo.png' alt="Think KY sponsor" />
-                </Link>
-              </Col>
-              <Col xs={6}>
-                <Link href='https://www.commercelexington.com/'>
-                  <StaticImage src='../../images/commerce-lexington-logo.png' alt="Commerce Lexington sponsor" />
-                </Link>
-              </Col>
-            </Row>
+
+
           </Col>
         </Row>
 
@@ -119,10 +144,10 @@ const Footer = () => {
         <Row className={styles.bottomRow}>
           <Col>
             <ul className={styles.copyrightInlineList}>
-              <li><Link to='/'>About</Link></li>
-              <li><Link to='/'>Careers</Link></li>
-              <li><Link to='/'>Privacy Policy</Link></li>
-              <li><Link to='/'>Terms of Service</Link></li>
+              <li><Link to='/about'>About</Link></li>
+              <li><Link to='/careers'>Careers</Link></li>
+              <li><Link to='/privacy'>Privacy Policy</Link></li>
+              <li><Link to='/terms'>Terms of Service</Link></li>
             </ul>
           </Col>
           <Col>
