@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
-      <Container >
+      <Container>
         <Navbar.Brand href="/" className={`text-uppercase ${navbarBrand}`}>
           <StaticImage
             src="../../images/logo.png"
@@ -64,9 +64,17 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.1">Web & App Development</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Be Awesome" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Be Awesome</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                <Link className={gatsbyLinks} to="/about/">
+                  Be Awesome
+                </Link>
+              </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">About</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                <Link className={gatsbyLinks} to="/about/">
+                  About
+                </Link>
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Core Values</NavDropdown.Item>
               <NavDropdown.Item>
                 <Link className={gatsbyLinks} to="/blog/">

@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+.hero {
+  background-image: url(../../images/5across-hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.bg-shader {
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+.lgx-heading-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  color: white;
+  max-width: 90%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 60px;
+}
+
+.lgx-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero .lgx-heading {
+  text-align: left;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.hero .img {
+  margin-top: 150px;
+  vertical-align: middle;
+  border: 0;
+}
+
+.hero .lgx-heading .catchline {
+  max-width: 100%;
+}
+
+.hero .lgx-heading .catchline .lgx-heading-title {
+  margin-top: 3rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.lgx-heading .lgx-heading-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 39px;
+  line-height: 58.5px;
+  font-weight: 900;
+  margin-top: 0;
+  color: #323333;
+  text-transform: uppercase;
+}
+
+.hero .title {
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.hero .lgx-btn-row {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 9%;
+  white-space: nowrap;
+}
+
+.icon {
+  margin-bottom: 50px;
+}
+
+.lgx-btn-margins {
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.lgx-btn-grey {
+  width: fit-content !important;
+  background-color: #323232 !important;
+  border-color: #323232 !important;
+}
+
+.lgx-btn-grey:hover {
+  color: rgb(129, 129, 129);
+}
+
+.lgx-btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: #c12029;
+  color: #fff;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  border: #c12029;
+  border-radius: 4px;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+.icon .lgx-btn {
+  white-space: nowrap;
+}
+
+.lgx-btn-large {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.red-circle {
+  text-align: center;
+  position: relative;
+}
+
+.red-circle img {
+  /* max-width: 100%; */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-1px);
+}
+
+.red-circle h2 {
+  font-weight: 900;
+  font-size: 40px;
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+}
+
+.icon-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-list:nth-child(5) {
+  margin-left: 0;
+}
+
+.pastPitches {
+  background-image: url(../../images/ainc-workspace-hero.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
+.margin-top-large {
+  margin-top: 180px;
+}
+
+.next-event {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.recentWinnerHeader {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333333;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+select {
+  margin-top: 20px;
+  border: 1px solid #c12029;
+  border-radius: 3px;
+  padding: 7px 65px;
+  margin-bottom: 100px;
+  background-color: #fff !important;
+}
+
+.rule {
+  color: black;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 50px;
+  margin-bottom: 5%;
+}
+
+.unicorn {
+  padding-top: 5ch;
+  position: relative;
+  width: 100%;
+}
+
+.bring-the-fun {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 0;
+  top: 0;
+  padding-top: 10%;
+  text-align: left;
+}
+
+.bring-the-fun p {
+  font-family: "Exo";
+  padding-bottom: 150px;
+  font-weight: 900;
+  display: block;
+  color: #ed3243;
+  text-transform: uppercase;
+  font-size: 8rem;
+}
+
+.unicorn img {
+  position: relative;
+  left: 20%;
+  top: -15%;
+  z-index: 20;
+  width: 80%;
+}
+
+@media (max-width: 1100px) {
+  .unicorn img {
+    left: 15%;
+    width: 80%;
+  }
+
+  .bring-the-fun p {
+    font-size: 6rem;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero .lgx-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pastPitches .lgx-heading-title {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 900;
+  }
+
+  .pastPitches .margin-top {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lgx-btn {
+    padding: 10px 2.6rem;
+  }
+
+  .bring-the-fun p {
+    font-size: 4rem;
+    padding-bottom: 40px;
+  }
+
+  .icon-btn-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7%;
+  }
+  .join-next {
+    text-align: center;
+    height: 300px;
+    background-color: #ed3243 !important;
+  }
+
+  .margin-top-large {
+    margin-top: 80px;
+  }
+
+  .red-circle-img {
+    display: none;
+  }
+
+  .red-circle h2 {
+    top: 25px;
+  }
+
+  .next-event {
+    top: 150px;
+  }
+
+  .margin-top-lrg {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lgx-heading-title {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+
+  .lgx-btn {
+    padding: 10px 40px;
+  }
+}
