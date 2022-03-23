@@ -181,7 +181,7 @@ const AboutPage = ({ data }) => {
           <Container>
             <Row>
               <h2 className={`text-uppercase text-center ${styles.headingTitle}`}>Meet The Team</h2>
-              <Col md={{ span: 10, offset: 2 }}>
+              <Col md={{ span: 10, offset: 2 }} lg={{span:10, offset: 1}} >
                 <Row>
                   {data.allNodeTeamMember.nodes.map((node) => (
                     <Col
