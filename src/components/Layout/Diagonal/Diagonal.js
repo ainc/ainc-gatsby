@@ -24,6 +24,9 @@ const DiagonalDiv = styled.div`
     left: 0;
     bottom: 0;
     background-color: ${styles.styles.colors.brandGreyLight};
+    background-image: ${props => (props.bgImage !== undefined) ? `url( ${Object.values(props.bgImage)[0]} )` : undefined};
+    background-size: cover;
+    background-position: center;
     transform: skewY(${Rotation}deg);
     transform-origin: 50% 0;
     backface-visibility: hidden;
@@ -35,11 +38,10 @@ const ContentDiv = styled.div`
   margin: 0 auto;
   padding: 1.5em;
   position: relative;
-  border: 2px dashed;
 `
 const Diagonal = (props) => {
   return (
-    <DiagonalDiv>
+    <DiagonalDiv {...props} >
       <ContentDiv>{props.children}</ContentDiv>
     </DiagonalDiv>
   )
