@@ -30,7 +30,7 @@ const InternshipsPage = ({ data }) => {
       <Container className='mb-5'>
         <Row>
           <Col md={7}> {/* className='text-center text-md-start' */}
-            <Title>LOOKING FOR AN INTERNSHIP?</Title>
+            <Title className="text-uppercase">Looking for an Internship?</Title>
             <p>
               If you’re looking to build your skillset with real projects while building the tech & startup community in Lexington, we’d love to chat. Did we mention we eat a *lot* of Oreos.
             </p>
@@ -48,7 +48,7 @@ const InternshipsPage = ({ data }) => {
           <Container>
             <Row>      
               <Col md={8}> {/* className='text-center text-md-start' */}
-                <Title className='text-white my-5'>ABOUT TEAM ALPHA</Title>
+                <Title className='text-white text-uppercase my-5'>About Team Alpha</Title>
                 <p className='text-white my-5'>
                   Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
                 </p>
@@ -61,7 +61,7 @@ const InternshipsPage = ({ data }) => {
       {/* Teams section - team components */}
       <Container className='my-5'>
         <Row>
-          <Title className='text-center my-5'>FIND THE RIGHT TEAM FOR YOU</Title>
+          <Title className='text-center text-uppercase my-5'>Find the Right Team for You</Title>
         </Row>
         <Row className='justify-content-center'>
           <Col sm md={4}>
@@ -117,7 +117,7 @@ const InternshipsPage = ({ data }) => {
             </Col>
             <Col className='my-2 d-block d-md-none' xs={12}/>
             <Col xs='auto'>
-              <Title className='text-danger' style={{writingMode:'vertical-lr', transform:'rotate(180deg)', margin:'0px'}}>WHY JOIN?</Title>
+              <Title className='text-danger text-uppercase' style={{writingMode:'vertical-lr', transform:'rotate(180deg)', margin:'0px'}}>Why Join?</Title>
             </Col>
             <Col xs={7} md={5} lg={4} xl={3}>
               <h5 className='text-white' style={{textAlign:'justify'}}>
