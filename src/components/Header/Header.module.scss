@@ -25,3 +25,9 @@
     color: rgb(255, 255, 255);
   }
 }
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    width: 100%;
+  }
+}
