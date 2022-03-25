@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
 import { Container, Col, Row, Button, Image } from "react-bootstrap";
-// import Title from '../../components/UI/Title/Title.js'
 import * as styles from "./about.module.css";
 import coreValues from "../../images/about-core-values.png";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -10,11 +9,14 @@ import TeamMember from "./components/TeamMember/TeamMember";
 import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
 import SocialMediaPhone from "../../images/social-media-phone.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faFacebookF,
+  faLinkedinIn,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
 const AboutPage = ({ data }) => {
   return (
@@ -120,13 +122,13 @@ const AboutPage = ({ data }) => {
         </section>
 
         {/* What We Do */}
-        <section className={styles.whatWeDo}>
-          <Container>
-            <Col className={`col-xs-12 `}>
+        <section className="mt-5">
+          <Container className={styles.whatWeDo}>
+            <div>
               <h2 className={`text-uppercase text-center ${styles.headingTitle}`}>
                 Learn More About What We Do
               </h2>
-            </Col>
+            </div>
             <Row>
               <Col sm={12} md={6} lg={4}>
                 <WhatWeDo
@@ -179,14 +181,14 @@ const AboutPage = ({ data }) => {
           <Container>
             <Row>
               <h2 className={`text-uppercase text-center ${styles.headingTitle}`}>Meet The Team</h2>
-              <Col md={{ span: 10, offset: 2 }}>
+              <Col md={{ span: 10, offset: 2 }} lg={{span:10, offset: 1}} >
                 <Row>
                   {data.allNodeTeamMember.nodes.map((node) => (
-                    <Col 
-                      sm={6}
-                      md={3}
+                    <Col
+                      sm={4}
+                      md={2}
                       lg={2}
-                      className="mb-3 mt-3 mx-md-3 mx-lg-2 mt-lg-3 mb-lg-3 mt-md-2 mb-md-2 mt-sm-4 mb-sm-4 mb-xs-3 mt-xs-3 d-flex justify-content-center"
+                      className="mb-3 mt-3 mx-md-1 mx-lg-0 mt-lg-3 mb-lg-3 mt-md-2 mb-md-2 mt-sm-4 mb-sm-4 mb-xs-3 mt-xs-3 d-flex justify-content-center"
                     >
                       <TeamMember
                         image={
@@ -206,54 +208,7 @@ const AboutPage = ({ data }) => {
         {/* Social Media */}
         <section className={styles.socialMedia}>
           <div className={styles.lgxInner}>
-            <Container>
-              <Row>
-                <Col sm={12}>
-                  <Row>
-                    <Col sm={6} className={`d-flex justify-content-center justify-content-md-end col-xs-12  ${styles.socialLeft}`}>
-                      <Image
-                        src={SocialMediaPhone}
-                        className={`${styles.imgResponsive}`}
-                        alt="Social media phone gif"
-                      />
-                    </Col>
-                    <Col sm={6} className={` d-flex justify-content-center justify-content-md-start ${styles.socialRight} col-xs-12 `}>
-                      <div className={`${styles.lgxHeading}`}>
-                        <h3 className={`text-wrap ${styles.headingTitle}`}>Let's Be Friends!</h3>
-                        <h5 className={styles.headingSubtitle}> - Find us on social media - </h5>
-                        <ul className={styles.socialLinks}>
-                          <li>
-                            <a href="https://twitter.com/awesomeinclex">
-                              <FontAwesomeIcon icon={faTwitter} />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.facebook.com/awesomeinclex">
-                              <FontAwesomeIcon icon={faFacebookF} />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.linkedin.com/school/awesome-inc/">
-                              <FontAwesomeIcon icon={faLinkedinIn} />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.instagram.com/awesomeinclex/">
-                              <FontAwesomeIcon icon={faInstagram} />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.youtube.com/user/AincTelevision/featured">
-                              <FontAwesomeIcon icon={faYoutube} />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Container>
+            <SocialMedia />
           </div>
           {/* Triangle btm of screen before footer  */}
           {/* <div className={styles.socialSectionTriangle}>

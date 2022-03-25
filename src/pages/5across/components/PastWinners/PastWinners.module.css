@@ -1,33 +1,44 @@
 .border {
   flex: 1 1 25%;
   border: solid #ed3742 1px;
+  /* border-top: none; */
   position: relative;
-  min-height: 300px;
-  max-height: 300px;
   margin-bottom: 5rem;
+  min-height: 210px;
+  max-height: 185px;
 }
 
 .subHeading {
   background-color: #fff;
-  width: min-content;
-  padding: 0px 12px;
+  inline-size: 225px;
   position: relative;
-  white-space: nowrap;
   left: 50%;
   top: -15px;
   transform: translateX(-50%);
   line-height: 30px;
   text-transform: uppercase;
-  font-size: 1.35rem;
-  font-weight: 900;
+  font-size: 20px;
+  color: #ed3742;
 }
 
 .content {
-  font-size: 15px;
-  padding: 2.5rem 2rem;
+  font-weight: 500;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: start;
+  font-size: 1.2rem;
+  white-space: normal;
+}
+
+.contentWinner {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-weight: 650;
+}
+
+.contentFounders {
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .btn {
@@ -42,6 +53,7 @@
   line-height: 30px;
   border: #c12029;
   border-radius: 4px;
+  padding: 0.5rem;
 }
 
 .absolute {
@@ -49,8 +61,7 @@
   position: absolute;
 }
 
-.btn:hover,
-.btnLongText:hover {
+.btn:hover {
   background: #c12029;
   color: #323333;
   border: #c12029;
@@ -60,17 +71,17 @@
   background-color: #c12029;
 }
 
-@media (max-width: 1200px) {
-  .subHeading {
-    font-size: 20px;
-  }
-}
-
 @media (max-width: 900px) {
   .btn {
     font-size: 15px;
   }
   .border {
     max-height: fit-content;
+  }
+}
+
+@media (max-width: 597px) {
+  .border {
+    min-height: 250px;
   }
 }

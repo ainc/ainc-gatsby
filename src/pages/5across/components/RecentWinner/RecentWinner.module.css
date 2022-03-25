@@ -1,0 +1,114 @@
+.recent-winner {
+  position: relative;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 125px;
+  border: 1px solid red;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+}
+
+.box-inner {
+  position: absolute;
+  top: -45px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.recent-winner-details {
+  order: 2;
+  text-align: left;
+  padding-top: 7%;
+}
+
+.recent-winner-img {
+  order: 1;
+  margin-right: 40px;
+}
+
+.recent-winner-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.kentucky {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.recent-winner-banner {
+  max-width: 200px;
+}
+
+@media (min-width: 1200px) {
+  .recent-winner-img img {
+    width: 80%;
+  }
+
+  .box-inner {
+    top: -30px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .box-inner {
+    top: -40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .box-inner {
+    top: -25px;
+  }
+}
+
+@media (max-width: 995px) {
+  .box-inner {
+    top: 15px;
+  }
+
+  .recent-winner-img img {
+    width: 100%;
+  }
+
+  .box-inner img:nth-child(1) {
+    width: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recent-winner-banner {
+    width: 100%;
+  }
+  .recent-winner {
+    text-align: center;
+    padding: 0px;
+    border: none;
+  }
+  .box-inner {
+    top: 0;
+    left: 0;
+    position: relative;
+    display: block;
+  }
+
+  .recent-winner-img {
+    margin-right: auto;
+    margin: auto;
+  }
+
+  .recent-winner-details {
+    text-align: center;
+  }
+  .kentucky {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -138,7 +138,10 @@
 }
 
 .whatWeDo {
+  padding: 0px 50px 50px;
+  border: 1px solid #ed3742;
   margin-bottom: 1rem;
+  margin-top: 125px;
 }
 
 .btnAbsolute {
@@ -150,6 +153,13 @@
 
 .whatWeDo .heading-title {
   margin-bottom: 6rem;
+  background-color: #fff;
+  margin-top: -30px;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 30px;
 }
 
 .lgx-btn:focus {
@@ -274,6 +284,10 @@
   .social-links {
     padding-left: 0;
   }
+
+  .whatWeDo .heading-title {
+    padding: 0px 10px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -303,7 +317,6 @@
   .social-right .lgx-heading {
     margin-left: 0;
   }
-  
 }
 
 @media (max-width: 480px) {
