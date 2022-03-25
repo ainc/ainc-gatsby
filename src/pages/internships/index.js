@@ -21,7 +21,7 @@ const InternshipsPage = ({ data }) => {
         <Container className='mb-5'>
           <Row>
             <Col md={7}>
-              <Title>Looking for an Internship?</Title>
+              <Title className="text-uppercase">Looking for an Internship?</Title>
               <p>
                 If you’re looking to build your skillset with real projects while building the tech & startup community in Lexington, we’d love to chat. Did we mention we eat a *lot* of Oreos.
               </p>
@@ -36,7 +36,7 @@ const InternshipsPage = ({ data }) => {
         <Container>
           <Row>      
             <Col md={8}>
-              <Title className='text-white my-5'>About Team Alpha</Title>
+              <Title className='text-white text-uppercase my-5'>About Team Alpha</Title>
               <p className='text-white my-5'>
                 Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
               </p>
