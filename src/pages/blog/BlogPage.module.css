@@ -191,3 +191,13 @@
     -webkit-line-clamp: 2;
   }
 }
+
+@media (max-width: 594px) {
+  .card {
+    height: 570px;
+  }
+
+  .blog-link {
+    top: 510px;
+  }
+}

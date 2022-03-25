@@ -21,7 +21,7 @@ const BlogPage = ({ data }) => {
         <Col lg={{ span: 10, offset: 1 }}>
           <Row>
             {data.allMdx.nodes.map((node) => (
-              <Col xl={4} md={6} sm={12} className={styles.center}>
+              <Col xl={4} md={6} sm={6} xs={12} className={styles.center}>
                 <Card style={{ width: "22.5rem" }} className={styles.card}>
                   <Card.Body>
                     <figure>
