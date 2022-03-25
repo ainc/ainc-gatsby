@@ -54,7 +54,7 @@ const Footer = () => {
     }
   `)
 
-  return(
+  return (
     <Container fluid className={styles.footerBackground}>
       <Container>
 
@@ -164,6 +164,7 @@ const Footer = () => {
       </Container>
     </Container>
   )
+  
 }
 
 export default Footer
