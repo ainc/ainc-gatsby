@@ -12,7 +12,8 @@ import {
 
 import { 
   navbarBrand,
-  NavLink
+  NavLink,
+  gatsbyLinks
 } from './Header.module.scss'
 
 
