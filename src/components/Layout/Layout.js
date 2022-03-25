@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 // import { Container, Row } from 'react-bootstrap'
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -24,10 +25,10 @@ const Layout = ({ pageTitle, children }) => {
       <GlobalStyle />
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <Header />
-        <div style={{paddingTop: 78 + 'px'}}>
-          {children}
-        </div>
-      
+      <div>
+        {children}
+      </div>
+      <Footer />
     </div>
   )
 }

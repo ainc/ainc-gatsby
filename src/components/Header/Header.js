@@ -22,9 +22,9 @@ const Header = () => {
   const logo_width = 30;
 
   return (
-    <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
-      <Container >
-        <Navbar.Brand href="/" className={`text-uppercase ${navbarBrand}`}>
+    <Navbar className="sticky-top" bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="/" className={`w-100 text-uppercase ${navbarBrand}`}>
           <StaticImage
             src="../../images/logo.png"
             width={logo_width}
