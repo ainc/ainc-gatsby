@@ -1,3 +1,19 @@
 .text-normal {
   text-transform: none !important;
 }
+
+.tablet-hide-bg {
+  @include screen-md {
+    background-image: none
+  }
+}
+
+.mobile-hide-bg {
+  @include screen-xs {
+    background-image: none
+  }
+
+  @include screen-sm {
+    background-image: none
+  }
+}

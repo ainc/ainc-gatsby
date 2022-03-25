@@ -1,87 +1,69 @@
 import * as React from 'react'
-// import { graphql } from 'gatsby'     unused
+import { graphql } from 'gatsby'
 import Layout from '../../components/Layout/Layout'
-import Diagonal from '../../components/Layout/Diagonal/Diagonal'     // diagonal isn't dynamic enough?
+import Diagonal from '../../components/Layout/Diagonal/Diagonal'
 import TeamButton from '../../components/TeamButton/TeamButton'
+import ImageOutline from '../../components/ImageOutline/ImageOutline'
 import { Container, Row, Col } from 'react-bootstrap'
 import { StaticImage } from 'gatsby-plugin-image'
 import Title from '../../components/UI/Title/Title'
-import Subtitle from '../../components/UI/Subtitle/Subtitle'
 import BrandButton from '../../components/UI/BrandButton/BrandButton'
+import { headerBackgroundAlignRight } from "./internships.module.css";
 import '../../styles/main.scss'
-
-import oreo from '/src/images/oreo-trail.png';
+import internWhy from '/src/images/intern-why.jpg';
 
 const InternshipsPage = ({ data }) => {
-
-  // Review layouts of Header, Why, then continue from Why Join
-
-  // First container: my-5
-  // Rows/Cols: No margins/padding; Exceptions are invis spacers, vertical centering ('my-auto'), and padding for BrandButton sizing
-  // Rows: for center, use text-center or justify-content-center
-  // Cols: Always nest in Rows amd specify breakpoint element ratios/12
-
-  // Keep stacked elements adjacent (not in rows) when possible
-
   return (
     <Layout pageTitle="Internships">
       
-      {/* Header section - image -> BG */}
-      <Container className='mb-5'>
-        <Row>
-          <Col md={7}> {/* className='text-center text-md-start' */}
-            <Title className="text-uppercase">Looking for an Internship?</Title>
-            <p>
-              If you’re looking to build your skillset with real projects while building the tech & startup community in Lexington, we’d love to chat. Did we mention we eat a *lot* of Oreos.
-            </p>
-            <BrandButton className='my-4'>Apply Now</BrandButton>
-          </Col>
-          <Col md={5}>
-            <StaticImage src='../../images/oreo-trail.png' alt="OREO with a red trail"/>
-          </Col>
-        </Row>
+      {/* Header section */}
+      <Container fluid className={`mobile-hide-bg ${headerBackgroundAlignRight}`}>
+        <Container className='mb-5'>
+          <Row>
+            <Col md={7}>
+              <Title>Looking for an Internship?</Title>
+              <p>
+                If you’re looking to build your skillset with real projects while building the tech & startup community in Lexington, we’d love to chat. Did we mention we eat a *lot* of Oreos.
+              </p>
+              <BrandButton className='my-4'>Apply Now</BrandButton>
+            </Col>
+          </Row>
+        </Container>
       </Container>
 
-      {/* Why section - diagonal & BG image */}
-      <Diagonal bgImage={{ oreo }}>
-        <Container fluid className='my-5' style={{backgroundColor:'#B00000'}}>
-          <Container>
-            <Row>      
-              <Col md={8}> {/* className='text-center text-md-start' */}
-                <Title className='text-white text-uppercase my-5'>About Team Alpha</Title>
-                <p className='text-white my-5'>
-                  Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
-                </p>
-              </Col>
-            </Row>
-          </Container>
+      {/* Why section */}
+      <Diagonal bgImage={{internWhy}}>
+        <Container>
+          <Row>      
+            <Col md={8}>
+              <Title className='text-white my-5'>About Team Alpha</Title>
+              <p className='text-white my-5'>
+                Our interns, or Team Alpha as we prefer, are integral parts in helping us make Lexington a better place to live and work. We want you to bring your passion, curiosity, determination, and healthy disregard of the fear of failure. Together, we can grow the tech and startup ecosystem and we promise not to take ourselves too seriously while we’re at it.
+              </p>
+            </Col>
+          </Row>
         </Container>
       </Diagonal>
 
-      {/* Teams section - team components */}
+      {/* Teams section */}
       <Container className='my-5'>
         <Row>
           <Title className='text-center text-uppercase my-5'>Find the Right Team for You</Title>
         </Row>
         <Row className='justify-content-center'>
-          <Col sm md={4}>
-            {/* Video */}
-            {/* <Subtitle className='text-center text-uppercase text-white fs-4 fw-bold bg-dark py-2'>Video</Subtitle> */}
-            {/* <TeamButton imgSrc='../../images/oreo-trail.png' imgAlt='this should work'>Events + Marketing</TeamButton> */}
+          <Col md={6} lg={4}>
+            <TeamButton img={ data.allFile.nodes[0] } imgAlt="Video internship">Video</TeamButton>
           </Col>
-          <Col sm md={4}>
-            {/* Development */}
-            <Subtitle className='text-center text-uppercase text-white fs-4 fw-bold bg-dark py-2'>Development</Subtitle>
+          <Col md={6} lg={4}>
+            <TeamButton img={ data.allFile.nodes[1] } imgAlt="Development internship">Development</TeamButton>
           </Col>
         </Row>
         <Row className='justify-content-center'>
-          <Col sm md={4}>
-            {/* Events + Marketing */}
-            <Subtitle className='text-center text-uppercase text-white fs-4 fw-bold bg-dark py-2'>Events + Marketing</Subtitle>
+          <Col md={6} lg={4}>
+            <TeamButton img={ data.allFile.nodes[2] } imgAlt="Events and Marketing internship">Events + Marketing</TeamButton>
           </Col>
-          <Col sm md={4}>
-            {/* Design */}
-            <Subtitle className='text-center text-uppercase text-white fs-4 fw-bold bg-dark py-2'>Design</Subtitle>
+          <Col md={6} lg={4}>
+            <TeamButton img={ data.allFile.nodes[3] } imgAlt="Design internship">Design</TeamButton>
           </Col>
         </Row>
         <Row className='text-center'>
@@ -91,7 +73,7 @@ const InternshipsPage = ({ data }) => {
         </Row>
       </Container>
 
-      {/* Who We Look For section - border */}
+      {/* Who We Look For section */}
       <Container className='my-5'>
         <Row className='text-center'>
           <Col>
@@ -108,7 +90,7 @@ const InternshipsPage = ({ data }) => {
         </Row>
       </Container>
 
-      {/* Why Join section - FINISHED */}
+      {/* Why Join section */}
       <Container fluid className='my-5 py-5' style={{backgroundColor:'#323232'}}>
         <Container>
           <Row className='justify-content-center'>
@@ -133,21 +115,29 @@ const InternshipsPage = ({ data }) => {
         </Container>
       </Container>
 
-      {/* Our Team section - borders and dynamic imgs? */}
+      {/* Our Team section */}
       <Container className='my-5'>
         <Row className='text-center'>
           <Col xs={6} md={3}>
-            <StaticImage objectFit='cover' src='../../images/emilywehrle-wall.jpg' alt="Headshot of Emily Wehrle" />
+            <ImageOutline>
+              <StaticImage objectFit='cover' src='../../images/emilywehrle-wall.jpg' alt="Headshot of Emily Wehrle" />
+            </ImageOutline>
           </Col>
           <Col xs={6} md={3}>
-            <StaticImage objectFit='cover' src='../../images/kyleraney-wall.jpg' alt="Headshot of Kyle Raney" />
+            <ImageOutline>
+              <StaticImage objectFit='cover' src='../../images/kyleraney-wall.jpg' alt="Headshot of Kyle Raney" />
+            </ImageOutline>
           </Col>
           <Col className='my-4 d-block d-md-none' xs={12}/>
           <Col xs={6} md={3}>
-            <StaticImage objectFit='cover' src='../../images/jacquelinebenson-wall.jpg' alt="Headshot of Jacqueline Benson" />
+            <ImageOutline>
+              <StaticImage objectFit='cover' src='../../images/jacquelinebenson-wall.jpg' alt="Headshot of Jacqueline Benson" />
+            </ImageOutline>
           </Col>
           <Col xs={6} md={3}>
-            <StaticImage objectFit='cover' src='../../images/garrettfahrbach-wall.jpg' alt="Headshot of GarrettFahrbach" />
+            <ImageOutline>
+              <StaticImage objectFit='cover' src='../../images/garrettfahrbach-wall.jpg' alt="Headshot of GarrettFahrbach" />
+            </ImageOutline>
           </Col>
         </Row>
         <Row className='text-center pt-5'>
@@ -161,14 +151,16 @@ const InternshipsPage = ({ data }) => {
   )
 }
 
-// export const query = graphql`
-//   query {
-//     image: file(relativePath: { eq: "oreo-trail.png" }) {
-//       childImageSharp {
-//         gatsbyImageData
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    allFile(filter: {relativePath: {in: ["intern-video.jpg", "intern-development.jpg", "intern-events-marketing.jpg", "intern-design.jpg"]}}) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`
 
 export default InternshipsPage;
