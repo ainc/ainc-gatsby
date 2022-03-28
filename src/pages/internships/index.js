@@ -21,7 +21,7 @@ const InternshipsPage = ({ data }) => {
         <Container className='mb-5'>
           <Row>
             <Col md={7}>
-              <Title className="text-uppercase">Looking for an Internship?</Title>
+              <Title className="text-uppercase mt-5">Looking for an Internship?</Title>
               <p>
                 If you’re looking to build your skillset with real projects while building the tech & startup community in Lexington, we’d love to chat. Did we mention we eat a *lot* of Oreos.
               </p>
@@ -101,8 +101,8 @@ const InternshipsPage = ({ data }) => {
             <Col xs='auto'>
               <Title className='text-danger text-uppercase' style={{writingMode:'vertical-lr', transform:'rotate(180deg)', margin:'0px'}}>Why Join?</Title>
             </Col>
-            <Col xs={7} md={5} lg={4} xl={3}>
-              <h5 className='text-white' style={{textAlign:'justify'}}>
+            <Col xs={7} md={5} lg={7} xl={6}>
+              <h5 className='text-white d-flex align-items-center' style={{textAlign:'justify'}}>
                 In addition to the free t-shirt, we’ll provide you with an opportunity to improve your skills, portfolio and network. Our goal is to assure you the best experience by helping you achieve your goals whether that is getting into your dream school or working for your favorite company.
               </h5>
             </Col>
