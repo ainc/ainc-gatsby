@@ -3,6 +3,15 @@ import { graphql } from "gatsby";
 import * as styles from "./5across.module.css";
 import Layout from "../../components/Layout/Layout";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
+
+import Title from "../../components/UI/Title/Title";
+import BrandButton from "../../components/UI/BrandButton/BrandButton";
+import PlannedEvent from "../../components/PlannedEvent/PlannedEvent";
+import RecentWinner from "./components/RecentWinner/RecentWinner";
+import PastWinners from "./components/PastWinners/PastWinners";
+import Sponsors from "../../components/Sponsors/Sponsors";
+import SocialMedia from "../../components/SocialMedia/SocialMedia";
+
 import fiveAcrossRedCircle from "../../images/5across-big-red-circle.png";
 import fiveAcrossBanner from "../../images/5across-banner.png";
 import fiveAcrossPitch from "../../images/5across-pitches.png";
@@ -11,11 +20,6 @@ import fiveAcrossPrize from "../../images/5across-prize.png";
 import fiveAcrossStart from "../../images/5across-start.png";
 import fiveAcrossEntry from "../../images/5across-entry.png";
 import dabbingUnicorn from "../../images/dabbing_unicorn.png";
-import PlannedEvent from "../../components/PlannedEvent/PlannedEvent";
-import RecentWinner from "./components/RecentWinner/RecentWinner";
-import PastWinners from "./components/PastWinners/PastWinners";
-import Sponsors from "../../components/Sponsors/Sponsors";
-import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
 const Index = ({ data }) => {
   //second query in page. Renders single winner_completed true value, sorted by DESC
@@ -88,42 +92,40 @@ const Index = ({ data }) => {
         <section className={styles.hero}>
           <Container>
             <Row>
-              <Col sm={8} lg={6}>
-                <div className={styles.lgxHeadingArea}>
-                  <div className={styles.lgxHeading}>
-                    <Image src={fiveAcrossBanner} className={styles.img} />
-                    <div className={styles.catchline}>
-                      <h2
-                        className={`${styles.title} ${styles.lgxZoomInOne} ${styles.lgxHeadingTitle}`}
-                      >
-                        A Pitch Competition for Kentucky Entrepreneurs
-                      </h2>
-                    </div>
-                    <div className={styles.lgxBtnRow}>
-                      <Button
-                        type="button"
-                        className={`${styles.lgxBtn} ${styles.lgxBtnMargins} ${styles.lgxBtnGrey}`}
-                        id="applyBtn"
-                        onClick={(e) =>
-                          (window.location.href =
-                            "https://forms.zohopublic.com/virtualoffice9155/form/5AcrossApplication1/formperma/i3hM2QiFcJG1DM_nCW8jQvMplp5UUFgRbKc5Ev8kuiA")
-                        }
-                      >
-                        Apply to pitch
-                      </Button>
-                      <Button
-                        type="button"
-                        className={`${styles.lgxBtn} ${styles.lgxBtnMargins} ${styles.lgxBtnGrey}`}
-                        role="button"
-                        aria-disabled="true"
-                        id="registerBtn"
-                        onClick={(e) =>
-                          (window.location.href = "http://www.eventbrite.com/e/288019432877")
-                        }
-                      >
-                        Register To Attend
-                      </Button>
-                    </div>
+              <Col sm={10} lg={8}>
+                <div className={styles.heading}>
+                  <Image src={fiveAcrossBanner} className={styles.img} />
+                  <div className={styles.catchline}>
+                    <Title
+                      className={`${styles.title} ${styles.lgxZoomInOne} ${styles.lgxHeadingTitle}`}
+                    >
+                      A Pitch Competition for Kentucky Entrepreneurs
+                    </Title>
+                  </div>
+                  <div className={styles.btnRow}>
+                    <BrandButton
+                      type="button"
+                      className={`${styles.btn} ${styles.btnMargins} ${styles.btnGrey} btn--small mx-5`}
+                      id="applyBtn"
+                      onClick={(e) =>
+                        (window.location.href =
+                          "https://forms.zohopublic.com/virtualoffice9155/form/5AcrossApplication1/formperma/i3hM2QiFcJG1DM_nCW8jQvMplp5UUFgRbKc5Ev8kuiA")
+                      }
+                    >
+                      Apply to pitch
+                    </BrandButton>
+                    <BrandButton
+                      type="button"
+                      className={`${styles.btn} ${styles.btnMargins} ${styles.btnGrey} btn--small`}
+                      role="button"
+                      aria-disabled="true"
+                      id="registerBtn"
+                      onClick={(e) =>
+                        (window.location.href = "http://www.eventbrite.com/e/288019432877")
+                      }
+                    >
+                      Register To Attend
+                    </BrandButton>
                   </div>
                 </div>
               </Col>
@@ -155,8 +157,8 @@ const Index = ({ data }) => {
             </div>
             <Row className={`mt-4 justify-content-center ${styles.iconBtnList}`}>
               <Col className={`${styles.iconBtnList}`} sm={12} lg={2} md={6}>
-                <Button
-                  className={`${styles.lgxBtn} ${styles.lgxBtnGrey}`}
+                <BrandButton
+                  className={`${styles.btn} ${styles.btnGrey} btn--small`}
                   id="applyBtn"
                   onClick={(e) =>
                     (window.location.href =
@@ -164,11 +166,11 @@ const Index = ({ data }) => {
                   }
                 >
                   Apply to pitch
-                </Button>
+                </BrandButton>
               </Col>
               <Col className={` ${styles.iconBtnList}`} sm={12} lg={2} md={6}>
-                <Button
-                  className={`w-100 ${styles.lgxBtn} ${styles.lgxBtnGrey}`}
+                <BrandButton
+                  className={`w-100 ${styles.btn} ${styles.btnGrey} btn--small`}
                   role="button"
                   aria-disabled="true"
                   id="registerBtn"
@@ -177,7 +179,7 @@ const Index = ({ data }) => {
                   }
                 >
                   Register to attend
-                </Button>
+                </BrandButton>
               </Col>
             </Row>
           </Container>
@@ -188,15 +190,15 @@ const Index = ({ data }) => {
             <Container fluid className={`${styles.bgShader}`}>
               <Row>
                 <Col className={styles.marginTop}>
-                  <h1 className={` text-center ${styles.lgxHeadingTitle}`}>
+                  <Title className={` text-center ${styles.headingTitle} text-white`}>
                     Over 10 years of putting the spotlight on Kentucky Entrepreneurs
-                  </h1>
+                  </Title>
                 </Col>
                 <Row>
-                  <Col>
-                    <Button className={`mt-2 mb-2 ${styles.lgxBtn} ${styles.lgxBtnLarge}`}>
+                  <Col className={`text-center`}>
+                    <BrandButton className={`mb-5 ${styles.btn} ${styles.btnLarge}`}>
                       Watch Past Pitches
-                    </Button>
+                    </BrandButton>
                   </Col>
                 </Row>
               </Row>
@@ -210,7 +212,7 @@ const Index = ({ data }) => {
               {/* <Image src={fiveAcrossArrow} alt="arrow" className={styles.redArrow} /> */}
               <Row className={styles.redCircle}>
                 <Image className={styles.redCircleImg} src={fiveAcrossRedCircle} alt="red-circle" />
-                <h2>Join us at the next 5 Across</h2>
+                <Title>Join us at the next 5 Across</Title>
 
                 {data.allNode5Across.nodes.map((node) =>
                   !node.field_winner_completed ? (
@@ -234,7 +236,7 @@ const Index = ({ data }) => {
           <Container>
             <Row className={styles.mostRecentWinner}>
               <Col className={`text-center ${styles.marginTopLarge}`}>
-                <p className={` mb-5 ${styles.recentWinnerHeader}`}>Our most recent winner</p>
+                <Title className={`mb-5 ${styles.recentWinnerHeader}`}>Our most recent winner</Title>
                 {sortedWinner ? (
                   <RecentWinner
                     alt="alt"
@@ -301,7 +303,7 @@ const Index = ({ data }) => {
           <Container>
             <Row>
               <Col className={`text-center ${styles.marginTopLarge}`}>
-                <p className={`${styles.rule}`}>And don't forget rule #17</p>
+                <Title className={`${styles.rule}`}>And don't forget rule #17</Title>
               </Col>
             </Row>
             <Row>

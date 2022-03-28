@@ -13,19 +13,7 @@
   background-color: rgba(1, 1, 1, 0.5);
 }
 
-.lgx-heading-title {
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 700;
-  color: white;
-  max-width: 90%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  line-height: 60px;
-  font-size: 60px;
-}
-
-.lgx-heading {
+.heading {
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -44,17 +32,17 @@
   border: 0;
 }
 
-.hero .lgx-heading .catchline {
+.hero .heading .catchline {
   max-width: 100%;
 }
 
-.hero .lgx-heading .catchline .lgx-heading-title {
+.hero .heading .catchline {
   margin-top: 3rem;
   text-align: left;
   text-transform: none;
 }
 
-.lgx-heading .lgx-heading-title {
+.heading {
   font-family: "Open Sans", sans-serif;
   font-size: 39px;
   line-height: 58.5px;
@@ -70,7 +58,7 @@
   color: #fff;
 }
 
-.hero .lgx-btn-row {
+.hero .btn-row {
   width: 100%;
   display: flex;
   text-align: center;
@@ -84,22 +72,21 @@
   margin-bottom: 50px;
 }
 
-.lgx-btn-margins {
-  margin-left: 10%;
+.btn-margins {
   margin-bottom: 10%;
 }
 
-.lgx-btn-grey {
+.btn-grey {
   width: fit-content !important;
   background-color: #323232 !important;
   border-color: #323232 !important;
 }
 
-.lgx-btn-grey:hover {
+.btn-grey:hover {
   color: rgb(129, 129, 129);
 }
 
-.lgx-btn {
+.btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   letter-spacing: 3px;
@@ -117,11 +104,11 @@
   padding: 5px 10px;
 }
 
-.icon .lgx-btn {
+.icon .btn {
   white-space: nowrap;
 }
 
-.lgx-btn-large {
+.btn-large {
   font-size: 20px;
   font-weight: 600;
   padding: 10px 20px;
@@ -140,7 +127,7 @@
   transform: translateY(-1px);
 }
 
-.red-circle h2 {
+.red-circle h1 {
   font-weight: 900;
   font-size: 40px;
   width: 100%;
@@ -205,7 +192,6 @@ select {
 }
 
 .rule {
-  color: black;
   font-weight: 900;
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -260,12 +246,12 @@ select {
 }
 
 @media (max-width: 900px) {
-  .hero .lgx-btn {
+  .hero .btn {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .pastPitches .lgx-heading-title {
+  .pastPitches .heading-title {
     font-size: 25px;
     line-height: 35px;
     font-weight: 900;
@@ -277,7 +263,7 @@ select {
 }
 
 @media (max-width: 767px) {
-  .lgx-btn {
+  .btn {
     padding: 10px 2.6rem;
   }
 
@@ -320,12 +306,12 @@ select {
 }
 
 @media (max-width: 480px) {
-  .lgx-heading-title {
+  .heading-title {
     font-size: 1.4rem;
     line-height: 2.1rem;
   }
 
-  .lgx-btn {
+  .btn {
     padding: 10px 40px;
   }
 }

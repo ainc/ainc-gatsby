@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./PastWinners.module.css";
-import { Button } from "react-bootstrap";
+import BrandButton from "../../../../components/UI/BrandButton/BrandButton";
 
 const PastWinners = ({ year, winner, founder, link }) => {
   return (
@@ -16,12 +16,12 @@ const PastWinners = ({ year, winner, founder, link }) => {
       })}
       <div className="d-flex justify-content-center">
         <div className={styles.absolute}>
-          <Button
+          <BrandButton
             onClick={() => window.open(link)}
-            className={`d-flex justify-content-center ${styles.btn}`}
+            className={`d-flex justify-content-center ${styles.btn} btn--small`}
           >
             Watch Video
-          </Button>
+          </BrandButton>
         </div>
       </div>
     </div>

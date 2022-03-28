@@ -203,6 +203,7 @@
   display: inline;
   text-align: center;
   font-size: 32px;
+  padding-left: 0;
 }
 
 .social-links li {

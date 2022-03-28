@@ -10,6 +10,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Subtitle from "/src/components/UI/Subtitle/Subtitle";
 
 const SocialMedia = () => {
   return (
@@ -33,7 +34,7 @@ const SocialMedia = () => {
                 className={` d-flex justify-content-center justify-content-md-start ${styles.socialRight} col-xs-12 `}
               >
                 <div className={`${styles.lgxHeading}`}>
-                  <h3 className={`text-wrap ${styles.headingTitle}`}>Let's Be Friends!</h3>
+                  <Subtitle className={`text-wrap text-center fw-bold`}>Let's Be Friends!</Subtitle>
                   <h5 className={styles.headingSubtitle}> - Find us on social media - </h5>
                   <ul className={styles.socialLinks}>
                     <li>

@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import * as styles from "./Sponsors.module.css";
 import { Row, Col } from "react-bootstrap";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Title from "/src/components/UI/Title/Title"
+import Subtitle from "/src/components/UI/Subtitle/Subtitle"
 
 const Sponsors = ({ title, presenting, supporting, alt }) => {
   useEffect(() => {
@@ -12,7 +14,7 @@ const Sponsors = ({ title, presenting, supporting, alt }) => {
 
   return (
     <div className={styles.border}>
-      <h3 className={`mx-auto ${styles.header}`}>Thank you to our sponsors</h3>
+      <Title className={`mx-auto ${styles.header}`}>Thank you to our sponsors</Title>
       {/* Title Sponsor */}
       <div className={styles.sponsors}>
         <h3 className={styles.subHeader}>Title Sponsor</h3>
