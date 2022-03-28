@@ -17,6 +17,13 @@ export const styles = {
     subtitle: `1.8rem`,
     subtitle_small: `1.6rem`,
     text: `1rem`,
-    text_small: `0.8rem`
+    text_small: `0.8rem`,
+    text_tiny: `0.6rem`,
+  },
+  screens: {
+    mobile: `480px`,
+    tablet: `768px`,
+    laptop: `1024px`,
+    desktop: `1200px`,
   }
 }

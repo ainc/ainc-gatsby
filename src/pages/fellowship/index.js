@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../../components/Layout/Layout'
 import { Container, Row, Col } from 'react-bootstrap'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -21,7 +20,7 @@ import { useKeenSlider } from 'keen-slider/react'
 
 const FellowshipPage = ({ data }) => {
 
-  const [refCallback, slider, sliderNode] = useKeenSlider(
+  const [refCallback] = useKeenSlider(
     {
       rtl: true,
       loop: true,

@@ -4,7 +4,7 @@ import HeroSlider, { Slide, Nav, OverlayContainer } from "hero-slider";
 import Wrapper from "../UI/Wrapper/Wrapper";
 import Title from "../UI/Title/Title";
 import Subtitle from "../UI/Subtitle/Subtitle";
-import BrandButton from "../BrandButton/BrandButton"
+import BrandButton from "../UI/BrandButton/BrandButton"
 // import { ButtonContainer } from "./BasicSlider.module.scss"
 import { Container} from "react-bootstrap"
 

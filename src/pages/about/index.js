@@ -1,22 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
-import { Container, Col, Row, Button, Image } from "react-bootstrap";
-import * as styles from "./about.module.css";
-import coreValues from "../../images/about-core-values.png";
+import { Container, Col, Row, Image } from "react-bootstrap";
 import { GatsbyImage } from "gatsby-plugin-image";
-import TeamMember from "./components/TeamMember/TeamMember";
-import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
-import SocialMediaPhone from "../../images/social-media-phone.gif";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faFacebookF,
-  faLinkedinIn,
-  faYoutube,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+
+import * as styles from "./about.module.css";
+
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
+import TeamMember from "../../components/TeamMember/TeamMember";
+import OutlineDiv from "../../components/DivOutline/DivOutline";
+import Title from "../../components/UI/Title/Title";
+import Subtitle from "../../components/UI/Subtitle/Subtitle";
+import BrandButton from "../../components/UI/BrandButton/BrandButton";
+
+import coreValues from "../../images/about-core-values.png";
 
 const AboutPage = ({ data }) => {
   return (
@@ -26,27 +23,27 @@ const AboutPage = ({ data }) => {
         <section className={styles.aboutHeader}>
           <Container>
             <Row>
-              <Col className="col-10 col-sm-8">
+              <Col className="col-9 col-sm-7">
                 <div className={styles.lgxHeading}>
-                  <h1 className={`${styles.headingTitle} ${styles.textDark}`}>
+                  <Title className={`text-normal mt-5`}>
                     We exist to help people pursue their definition of awesome.
-                  </h1>
-                  <p className={`${styles.headingSubtitle} ${styles.textDark}`}>
+                  </Title>
+                  <Subtitle className={`fs-6 mt-2 mb-5`}>
                     Awesome Inc was founded on the basis of the "give-first" mentality. Awesome Inc
                     started in 2009 and has grown to be the epicenter for anything related to
                     technology or business. We strive to make Lexington a better place to live and
                     work.
-                  </p>
-                  <Button className={`text-nowrap ${styles.lgxBtn}`}>View Our Culture Book</Button>
+                  </Subtitle>
+                  <BrandButton className={`text-nowrap`}>View Our Culture Book</BrandButton>
                 </div>
               </Col>
             </Row>
             <Row>
               <Image className={`${styles.headerImg}`} src={coreValues} alt="core-values" />
               <Col className="col-sm-8 col-10">
-                <Button className={`text-nowrap ${styles.lgxBtn}`}>
+                <BrandButton className={`text-nowrap`}>
                   Read About Our Core Values
-                </Button>
+                </BrandButton>
               </Col>
             </Row>
           </Container>
@@ -57,9 +54,9 @@ const AboutPage = ({ data }) => {
           {data.allNodeAccomplishments.nodes.map((node) => (
             <Container>
               <Row>
-                <h2 className={`text-white text-center ${styles.headingTitle}`}>
+                <Title className={`text-white text-center my-5`}>
                   {node.field_header.value}
-                </h2>
+                </Title>
                 <Col lg={{ span: 8, offset: 2 }}>
                   <Row>
                     <Col
@@ -131,42 +128,42 @@ const AboutPage = ({ data }) => {
             </div>
             <Row>
               <Col sm={12} md={6} lg={4}>
-                <WhatWeDo
+                <OutlineDiv
                   subHeading="Coding School"
                   content="Awesome Inc U is our coding school. It is for both adults and children. We have taught over 1500 people to code with us."
                   btnText="Read More"
                 />
               </Col>
               <Col sm={12} md={6} lg={4}>
-                <WhatWeDo
+                <OutlineDiv
                   subHeading="entrepreneurial Hub"
                   content="Our space and network and provide an opportunity for entrepreneurs to get connected to who they need to be successful."
                   btnText="Read More"
                 />
               </Col>
               <Col sm={12} md={6} lg={4}>
-                <WhatWeDo
+                <OutlineDiv
                   subHeading="Apax Software"
                   content="Creating technology is one of our favorite things to do at Awesome Inc. Our software arm, APAX Software, can build enterprise solutions suited for anyone."
                   btnText="Visit Site"
                 />
               </Col>
               <Col sm={12} md={6} lg={4}>
-                <WhatWeDo
+                <OutlineDiv
                   subHeading="Workspace"
                   content="We have a space for you to do your best work at. You can also host events at our space."
                   btnText="Read More"
                 />
               </Col>
               <Col sm={12} md={6} lg={4}>
-                <WhatWeDo
+                <OutlineDiv
                   subHeading="Innovation Incubated"
                   content="Helping KY companies discover, test, and implement innovative ideas."
                   btnText="Read More"
                 />
               </Col>
               <Col sm={12} md={6} lg={4}>
-                <WhatWeDo
+                <OutlineDiv
                   subHeading="Culture"
                   content="Culture is so important to us. We want to share it with the community and invite everyone in on it."
                   btnText="Culture Book"

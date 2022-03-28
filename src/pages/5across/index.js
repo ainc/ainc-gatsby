@@ -9,7 +9,6 @@ import fiveAcrossPitch from "../../images/5across-pitches.png";
 import fiveAcrossTime from "../../images/5across-time.png";
 import fiveAcrossPrize from "../../images/5across-prize.png";
 import fiveAcrossStart from "../../images/5across-start.png";
-import fiveAcrossArrow from "../../images/5across-arrow.png";
 import fiveAcrossEntry from "../../images/5across-entry.png";
 import dabbingUnicorn from "../../images/dabbing_unicorn.png";
 import PlannedEvent from "../../components/PlannedEvent/PlannedEvent";

@@ -15,8 +15,10 @@ const Title = styled.h1`
   &.white {
     color: white;
   }
-  text-transform: uppercase;
   letter-spacing: 2px;
+  @media only screen and (max-width: ${styles.styles.screens.mobile}) {
+    font-size: ${styles.styles.sizes.subtitle};
+  }
 `
 
 

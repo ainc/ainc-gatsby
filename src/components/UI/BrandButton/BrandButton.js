@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Button } from "react-bootstrap"
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import * as styles from '../../../styles/Variables'
@@ -18,6 +17,11 @@ const BrandButton = styled.button`
     border: 2px solid ${styles.styles.colors.brand};
     border-radius: 4px;
     position: relative;
+
+    @media only screen and (max-width: ${styles.styles.screens.mobile}) {
+        font-size: ${styles.styles.sizes.text_tiny};
+        padding: 0.3rem 1rem;
+    }
 
     &.disabled,
     &[disabled],
@@ -48,6 +52,12 @@ const brandButton = (props) => {
             {props.children}
         </BrandButton>
     ) 
+}
+
+brandButton.propTypes = {
+    childen: PropTypes.oneOfType([
+        PropTypes.string,
+    ])
 }
  
 export default brandButton;

@@ -1,7 +1,6 @@
 import React from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as styles from "./TeamMember.module.css";
-import BrianRaney from "../../../../images/brianraney-wall.jpeg";
 import styled from "styled-components";
 
 const TeamMemberImg = styled(GatsbyImage)`
