@@ -6,6 +6,7 @@ import * as styles from "./workspace.module.css";
 import MemberOption from "../../components/MemberOptions/memberOptions";
 import Amenities from "../../components/Amenities/Amenities";
 import Title from "../../components/UI/Title/Title";
+import Subtitle from "../../components/UI/Subtitle/Subtitle";
 import SeeTheSpace from "./Components/SeeTheSpace/SeeTheSpace";
 import ModalCustom from "../../components/Modal/ModalCustom";
 //Image Links Below
@@ -39,9 +40,9 @@ const WorkspacePage = () => {
             <Row>
               <Col className={` ${styles.lgxHeadingArea} ${styles.lgxHeading} `}>
                 <Title className={`${styles.headingTitle} ${styles.extraBold} text-white`}>Workspace</Title>
-                <h4 className={styles.headingSubtitle}>
+                <Subtitle className={styles.headingSubtitle}>
                   <i>Get your best work done here.</i>
-                </h4>
+                </Subtitle>
               </Col>
             </Row>
           </Container>
@@ -57,9 +58,9 @@ const WorkspacePage = () => {
       <section className={styles.member}>
         <Container>
           <Row>
-            <h2 className={`${styles.headingTitle} ${styles.extraBold} ${styles.lineHeight}`}>
+            <Title className={`${styles.headingTitle} ${styles.extraBold} ${styles.lineHeight}`}>
               Become a member
-            </h2>
+            </Title>
           </Row>
           <Row>
             <Col md={4} sm={12}>
@@ -107,11 +108,11 @@ const WorkspacePage = () => {
       <section className={styles.spotlightAdult}>
         <Container fluid>
           <Row>
-            <h2
+            <Title
               className={`${styles.headingTitle} ${styles.extraBold} ${styles.amenities} ${styles.lineHeight}`}
             >
               Membership Amenities
-            </h2>
+            </Title>
           </Row>
           <Row className={styles.spotlightAdult}>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 9, offset: 2 }}>
