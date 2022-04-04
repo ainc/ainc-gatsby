@@ -12,7 +12,6 @@ const RecentWinner = ({ image, alt, winner }) => {
           <Col sm={10} md={6} className={styles.recentWinnerImg}>
             <GatsbyImage
               objectFit="contain"
-              imgClassName={styles.gatsbyImg}
               image={image}
               alt={alt}
             />

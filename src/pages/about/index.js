@@ -24,7 +24,7 @@ const AboutPage = ({ data }) => {
           <Container>
             <Row>
               <Col className="col-9 col-sm-7">
-                <div className={styles.lgxHeading}>
+                <div className={styles.heading}>
                   <Title className={`text-normal mt-5`}>
                     We exist to help people pursue their definition of awesome.
                   </Title>
@@ -203,8 +203,8 @@ const AboutPage = ({ data }) => {
         </section>
 
         {/* Social Media */}
-        <section className={styles.socialMedia}>
-          <div className={styles.lgxInner}>
+        <section>
+          <div className={styles.inner}>
             <SocialMedia />
           </div>
           {/* Triangle btm of screen before footer  */}

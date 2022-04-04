@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import * as styles from "./5across.module.css";
 import Layout from "../../components/Layout/Layout";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
 import Title from "../../components/UI/Title/Title";
 import BrandButton from "../../components/UI/BrandButton/BrandButton";
@@ -97,7 +97,7 @@ const Index = ({ data }) => {
                   <Image src={fiveAcrossBanner} className={styles.img} />
                   <div className={styles.catchline}>
                     <Title
-                      className={`${styles.title} ${styles.lgxZoomInOne} ${styles.lgxHeadingTitle}`}
+                      className={`${styles.title}`}
                     >
                       A Pitch Competition for Kentucky Entrepreneurs
                     </Title>
@@ -234,7 +234,7 @@ const Index = ({ data }) => {
         {/* Most Recent Winner */}
         <section>
           <Container>
-            <Row className={styles.mostRecentWinner}>
+            <Row className={``}>
               <Col className={`text-center ${styles.marginTopLarge}`}>
                 <Title className={`mb-5 ${styles.recentWinnerHeader}`}>Our most recent winner</Title>
                 {sortedWinner ? (

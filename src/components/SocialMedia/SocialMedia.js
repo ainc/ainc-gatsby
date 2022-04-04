@@ -21,7 +21,7 @@ const SocialMedia = () => {
             <Row>
               <Col
                 sm={6}
-                className={`d-flex justify-content-center justify-content-md-end col-xs-12  ${styles.socialLeft}`}
+                className={`d-flex justify-content-center justify-content-md-end col-xs-12`}
               >
                 <Image
                   src={SocialMediaPhone}
@@ -33,7 +33,7 @@ const SocialMedia = () => {
                 sm={6}
                 className={` d-flex justify-content-center justify-content-md-start ${styles.socialRight} col-xs-12 `}
               >
-                <div className={`${styles.lgxHeading}`}>
+                <div>
                   <Subtitle className={`text-wrap text-center fw-bold`}>Let's Be Friends!</Subtitle>
                   <h5 className={styles.headingSubtitle}> - Find us on social media - </h5>
                   <ul className={styles.socialLinks}>

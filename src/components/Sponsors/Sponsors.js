@@ -3,7 +3,7 @@ import * as styles from "./Sponsors.module.css";
 import { Row, Col } from "react-bootstrap";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Title from "/src/components/UI/Title/Title"
-import Subtitle from "/src/components/UI/Subtitle/Subtitle"
+// import Subtitle from "/src/components/UI/Subtitle/Subtitle"
 
 const Sponsors = ({ title, presenting, supporting, alt }) => {
   useEffect(() => {

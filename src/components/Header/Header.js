@@ -12,8 +12,6 @@ import {
 
 import { 
   navbarBrand,
-  NavLink,
-  gatsbyLinks
 } from './Header.module.scss'
 
 
@@ -57,7 +55,7 @@ const Header = () => {
             </NavDropdown>
             <NavDropdown title="Workspace" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <Link className={gatsbyLinks} to="/workspace/">
+                <Link to="/workspace/">
                   Workspace
                 </Link>
               </NavDropdown.Item>
@@ -71,19 +69,19 @@ const Header = () => {
             </NavDropdown>
             <NavDropdown title="Be Awesome" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
-                <Link className={gatsbyLinks} to="/about/">
+                <Link to="/about/">
                   Be Awesome
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.2">
-                <Link className={gatsbyLinks} to="/about/">
+                <Link to="/about/">
                   About
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Core Values</NavDropdown.Item>
               <NavDropdown.Item>
-                <Link className={gatsbyLinks} to="/blog/">
+                <Link to="/blog/">
                   Blog
                 </Link>
               </NavDropdown.Item>
