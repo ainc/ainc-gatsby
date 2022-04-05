@@ -1,17 +1,28 @@
 .navbar-brand {
-  font-family: 'Exo';
+  font-family: "Exo";
   font-weight: 900;
   letter-spacing: 1.5px;
   line-height: 1.75rem;
-  text-shadow: 
-    -0.5px 0 white,
-    0 0.5px white, 
-    0.5px 0 white, 
-    0 -0.5px white,
-    -0.5px -0.5px white,
-    0.5px 0.5px white,
-    -0.5px 0.5px white,
-    0.5px -0.5px white;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white, -0.5px -0.5px white,
+    0.5px 0.5px white, -0.5px 0.5px white, 0.5px -0.5px white;
+}
+
+.lgxBtn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: #c12029;
+  color: #fff;
+  margin-left: 50px;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 5px 10px;
+  line-height: 30px;
+  white-space: nowrap;
+  border-radius: 4px;
+  display: none;
 }
 
 .NavLink {

@@ -63,14 +63,15 @@ const WorkspacePage = () => {
           </Row>
           <Row>
             <Col md={4} sm={12}>
+              {/* Modal will scroll to top until imgModal has a value added */}
               <MemberOption
                 imgModal="#"
                 imgSrc={Mail}
-                header="VIRTUAL MEMBER"
-                infoOne="DOWNTOWN MAILING ADDRESS"
-                infoTwo="CONFERENCE ROOM ACCESS"
-                infoThree="MEMBER EXCLUSIVE EVENTS"
-                price="$75/MONTH"
+                header="Virtual Member"
+                infoOne="Downtown Mailing Address"
+                infoTwo="Conference Room Access"
+                infoThree="Member Exclusive Events"
+                price="$75/Month"
                 imgAlt
                 id="44"
               />
@@ -79,11 +80,11 @@ const WorkspacePage = () => {
               <MemberOption
                 imgModal="#"
                 imgSrc={Desktop}
-                header="OPEN DESK MEMBER"
+                header="Open Desk Member"
                 infoOne="24/7 Access to Our Space"
                 infoTwo="Conference Room Access"
                 infoThree="Member Exclusive Events"
-                price="$199/MONTH"
+                price="$199/Month"
               />
             </Col>
             {/* The lock image is a lot larger than the other images, so an extra prop was needed to even this out, aka classN. */}
@@ -91,11 +92,11 @@ const WorkspacePage = () => {
               <MemberOption
                 imgModal="#"
                 imgSrc={Lock}
-                header="PRIVATE OFFICE"
+                header="Private Office"
                 infoOne="Private Office Space"
                 infoTwo="Conference Room Access"
                 infoThree="Member Exclusive Events"
-                price="REACH OUT FOR PRICING"
+                price="Reach Out For Pricing"
                 classN={styles.lockIcon}
               />
             </Col>

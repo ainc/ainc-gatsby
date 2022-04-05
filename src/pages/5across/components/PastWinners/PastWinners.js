@@ -9,7 +9,7 @@ const PastWinners = ({ year, winner, founder, link }) => {
       <p className={`${styles.content} ${styles.contentWinner}`}>{winner}</p>
       <p className={`${styles.content} ${styles.contentFounders}`}>Founders:</p>
       {/* maps through the array of founders names. */}
-      {founder.map((founders) => {
+      {founder?.map((founders) => {
         return founders?.map((foundingMember) => {
           return <p className={styles.content}>{foundingMember}</p>;
         });

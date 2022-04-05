@@ -1,25 +1,23 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
-import styled from "styled-components"
-import "./header.scss"
-import { 
-  Navbar,
-  Nav,
-  NavDropdown,
-  Container
-} from 'react-bootstrap'
+import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
+import "./header.scss";
+import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 
-import { 
-  navbarBrand,
-  NavLink,
-  gatsbyLinks
-} from './Header.module.scss'
-
+import { navbarBrand, NavLink, gatsbyLinks, lgxBtn } from "./Header.module.scss";
 
 const Header = () => {
   const logo_height = 30;
   const logo_width = 30;
+
+  // const bootcampPage = "/bootcamp/";
+
+  // const [bootcampBtn, setBootcampBtn] = useState(false);
+
+  // useEffect(() => {
+  //   window.location.pathname === bootcampPage ? setBootcampBtn(true) : setBootcampBtn(false);
+  // }, []);
 
   return (
     <Navbar className="sticky-top" bg="dark" variant="dark" expand="lg">
@@ -92,6 +90,7 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.4">Internships</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Events</NavDropdown.Item>
             </NavDropdown>
+            {/* {bootcampBtn ? <Button className={lgxBtn}>Apply Now</Button> : null} */}
           </Nav>
         </Navbar.Collapse>
       </Container>

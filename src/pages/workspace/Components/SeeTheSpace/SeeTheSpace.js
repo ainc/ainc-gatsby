@@ -46,8 +46,6 @@ const SeeTheSpace = (props) => {
         </Col>
         <Col>
           <ModalCustom lgShow={lgShow} hide={handleClose}>
-
-
           </ModalCustom>
         </Col>
       </Row>

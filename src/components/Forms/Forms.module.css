@@ -1,0 +1,71 @@
+.lgxBtn {
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: #c12029;
+  color: #fff;
+  /* margin-left: 50px; */
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 20px;
+  line-height: 30px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.lgxBtn:hover {
+  color: #000;
+  background-color: #c12029;
+  border: 2px solid #c12029;
+}
+
+.lgxBtn:focus,
+.lgxBtn:active {
+  background-color: #8a1f24;
+  color: rgb(196, 196, 196) !important;
+  border-color: #8a1f24 !important;
+  box-shadow: 0 0 0 0.2rem rgba(209, 43, 43, 0.5) !important;
+}
+
+.form-btn {
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: #c12029;
+  color: #fff;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px !important;
+  padding: 5px 15px !important;
+  line-height: 30px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.form-btn:hover {
+  color: #000;
+  background-color: #c12029;
+  border: 2px solid #c12029;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-text {
+  color: #fff;
+  font-size: 14px;
+}
+
+.form-subtext {
+  color: rgb(206, 206, 206);
+  font-size: 14px;
+}

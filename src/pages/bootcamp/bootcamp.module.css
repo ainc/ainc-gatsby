@@ -1,0 +1,38 @@
+.lgxBtn {
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: #c12029;
+  color: #fff;
+  margin-left: 50px;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 5px 10px;
+  line-height: 30px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.lgxBtnApply {
+  font-size: 15px !important;
+  white-space: nowrap;
+  line-height: 15px !important;
+  padding: 10px 20px !important;
+  position: fixed !important;
+  top: 125px;
+  z-index: 100;
+  right: 100px;
+}
+
+.lgxBtnApply:hover {
+  color: #000;
+  background-color: #c12029;
+  border: 2px solid #c12029;
+}
+
+@media (max-width: 995px) {
+  .lgxBtnApply {
+    display: none !important;
+  }
+}
