@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+div.most-popular-ribbon {
+  height: 5px;
+  background-color: $brand-color;
+}
+
+div.icon img {
+  object-fit: contain !important;
+}
+
+h3.plan-length {
+  letter-spacing: -1px;
+}
+
+h1.price {
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+
+h5.billing-frequency {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.red-check {
+  color: $brand-color;
+  left: -10px;
+}
