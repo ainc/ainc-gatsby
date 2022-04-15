@@ -13,7 +13,7 @@ import Title from "../../components/UI/Title/Title";
 import Subtitle from "../../components/UI/Subtitle/Subtitle";
 import BrandButton from "../../components/UI/BrandButton/BrandButton";
 
-import coreValues from "../../images/about-core-values.png";
+import coreValues from "../../images/graphics/core-values.png";
 
 const AboutPage = ({ data }) => {
   return (

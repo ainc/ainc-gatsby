@@ -125,7 +125,7 @@ const FellowshipPage = ({ data }) => {
           </Col>
           <Col xs={4} sm={6}>
             <Title>How it Works</Title>
-            <StaticImage src="../../images/arrow-red.png" alt="red arrow"/>
+            <StaticImage src="../../images/graphics/arrow-left-red.png" alt="red arrow"/>
           </Col>
         </Row>
       </Container>
