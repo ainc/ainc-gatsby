@@ -63,7 +63,7 @@ const Footer = () => {
           <Col xs md={4}>
             <Row className='justify-content-center'>
               <Link className={styles.aincLogoGap} href='/'>
-                <StaticImage src='../../images/logos/ainc-logo.png' alt="Awesome Inc logo" />
+                <StaticImage src='../../images/logos/ainc-logo-text.png' alt="Awesome Inc logo" />
               </Link>
             </Row>
             <Row className={styles.firstColRow}>

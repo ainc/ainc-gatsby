@@ -69,7 +69,7 @@ const FellowshipPage = ({ data }) => {
             <BrandButton className="my-3">Apply Now</BrandButton>
           </Col>
           <Col className="" xs={12} sm={8}>
-            <StaticImage src="../../images/brainstorming.jpg" width='375px' className='position-relative' alt="people brainstorming"/>
+            <StaticImage src="../../images/people-brainstorming.jpg" width='375px' className='position-relative' alt="people brainstorming"/>
             
           </Col>
         </Row>
