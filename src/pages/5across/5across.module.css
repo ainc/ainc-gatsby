@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 .hero {
-  background-image: url(../../images/5across-hero.png);
+  background-image: url(../../images/backgrounds/5-across-hero.png);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
@@ -151,7 +151,7 @@
 }
 
 .pastPitches {
-  background-image: url(../../images/ainc-workspace-hero.jpeg);
+  background-image: url(../../images/ainc-workspace.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;

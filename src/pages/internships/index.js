@@ -10,7 +10,7 @@ import Title from '../../components/UI/Title/Title'
 import BrandButton from '../../components/UI/BrandButton/BrandButton'
 import { headerBackgroundAlignRight } from "./internships.module.css";
 import '../../styles/main.scss'
-import internWhy from '/src/images/intern-why.jpg';
+import internWhy from '/src/images/backgrounds/internships-why.jpg';
 
 const InternshipsPage = ({ data }) => {
   return (
@@ -95,7 +95,7 @@ const InternshipsPage = ({ data }) => {
         <Container>
           <Row className='justify-content-center'>
             <Col className='text-center my-auto' xs={12} md={5} lg={3}>
-              <StaticImage src='../../images/question.png' alt="Question mark logo" width={250} />
+              <StaticImage src='../../images/icons/question.png' alt="Question mark logo" width={250} />
             </Col>
             <Col className='my-2 d-block d-md-none' xs={12}/>
             <Col xs='auto'>
@@ -120,23 +120,23 @@ const InternshipsPage = ({ data }) => {
         <Row className='text-center'>
           <Col xs={6} md={3}>
             <ImageOutline>
-              <StaticImage objectFit='cover' src='../../images/emilywehrle-wall.jpg' alt="Headshot of Emily Wehrle" />
+              <StaticImage objectFit='cover' src='../../images/headshots/emily-wehrle-wall.jpg' alt="Headshot of Emily Wehrle" />
             </ImageOutline>
           </Col>
           <Col xs={6} md={3}>
             <ImageOutline>
-              <StaticImage objectFit='cover' src='../../images/kyleraney-wall.jpg' alt="Headshot of Kyle Raney" />
+              <StaticImage objectFit='cover' src='../../images/headshots/kyle-raney-wall.jpg' alt="Headshot of Kyle Raney" />
             </ImageOutline>
           </Col>
           <Col className='my-4 d-block d-md-none' xs={12}/>
           <Col xs={6} md={3}>
             <ImageOutline>
-              <StaticImage objectFit='cover' src='../../images/jacquelinebenson-wall.jpg' alt="Headshot of Jacqueline Benson" />
+              <StaticImage objectFit='cover' src='../../images/headshots/jacqueline-benson-wall.jpg' alt="Headshot of Jacqueline Benson" />
             </ImageOutline>
           </Col>
           <Col xs={6} md={3}>
             <ImageOutline>
-              <StaticImage objectFit='cover' src='../../images/garrettfahrbach-wall.jpg' alt="Headshot of GarrettFahrbach" />
+              <StaticImage objectFit='cover' src='../../images/headshots/garrett-fahrbach-wall.jpg' alt="Headshot of GarrettFahrbach" />
             </ImageOutline>
           </Col>
         </Row>

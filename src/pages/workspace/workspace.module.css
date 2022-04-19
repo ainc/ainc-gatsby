@@ -10,7 +10,7 @@ body {
 
 .header-workspace {
   font-family: "Open Sans", sans-serif;
-  background-image: url(../../images/ainc-workspace-header-3.png);
+  background-image: url(../../images/backgrounds/workspace-header.png);
   background-size: cover;
   background-position-y: 110%;
   background-position-x: center;

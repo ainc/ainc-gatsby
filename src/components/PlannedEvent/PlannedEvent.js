@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Image } from "react-bootstrap";
 import * as styles from "./PlannedEvent.module.css";
-import fiveAcrossBanner from "../../images/5across-banner.png";
+import fiveAcrossBanner from "../../images/logos/5-across-logo-text.png";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const PlannedEvent = ({ date, location, title, alt, image }) => {

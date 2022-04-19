@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./RecentWinner.module.css";
 import { Col, Row, Image } from "react-bootstrap";
-import fiveAcrossBanner from "../../../../images/5across-banner.png";
+import fiveAcrossBanner from "../../../../images/logos/5-across-logo-text.png";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const RecentWinner = ({ image, alt, winner }) => {

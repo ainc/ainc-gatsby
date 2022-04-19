@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
 import { Card, Row, Col, Container, Image } from "react-bootstrap";
-import Mail from "../../images/awesome-inc-space-banner.jpeg";
+import Mail from "../../images/ainc-space.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./BlogPage.module.css";

@@ -1,5 +1,5 @@
 import React from "react";
-import Mail from "../../../images/awesome-inc-space-banner.jpeg";
+import Mail from "../../../images/ainc-space.jpeg";
 import * as styles from "../BlogPage.module.css";
 import { Image, Card } from "react-bootstrap";
 

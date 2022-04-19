@@ -16,7 +16,7 @@ const LearnPage = ({ data }) => {
       <Container fluid>
         <Row>
           <Col>
-            <StaticImage src="../../images/macbook-code-learn.png" alt="Coding laptop" />
+            <StaticImage src="../../images/macbook-code.png" alt="Coding laptop" />
           </Col>
           <Col className="m-auto">
             <Title className="brand" >Learn to Code</Title>
@@ -37,13 +37,13 @@ const LearnPage = ({ data }) => {
             </p>
           </Col>
           <Col xs={12} sm={{ span: 4}}>
-            <StaticImage src='../../images/student-learn-to-code-shirt.jpg' alt='learn to code' />
+            <StaticImage src='../../images/student-coding-shirt.jpg' alt='learn to code' />
           </Col>
         </Row>
 
         <Row className="mt-5">
           <Col xs={12} sm={{ offset: 1, span: 4}}>
-          <StaticImage src='../../images/student-learn-to-code-week-of-code.jpg' alt='learn to code youth classes' />
+          <StaticImage src='../../images/student-coding.jpg' alt='learn to code youth classes' />
           </Col>
           <Col xs={12} sm={{ span: 6}}>
             
@@ -68,7 +68,7 @@ const LearnPage = ({ data }) => {
             <BrandButton className="secondary btn--small text-end float-end">Learn More</BrandButton>
           </Col>
           <Col xs={12} sm={{ span: 4}}>
-            <StaticImage src='../../images/student-learn-to-code-shirt.jpg' alt='learn to code' />
+            <StaticImage src='../../images/student-coding-shirt.jpg' alt='learn to code' />
           </Col>
         </Row>
 

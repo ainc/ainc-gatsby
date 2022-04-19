@@ -24,7 +24,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand href="/" className={`w-100 text-uppercase ${navbarBrand}`}>
           <StaticImage
-            src="../../images/logo.png"
+            src="../../images/logos/ainc-logo.png"
             width={logo_width}
             height={logo_height}
             className="d-inline-block align-top"

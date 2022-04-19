@@ -4,9 +4,9 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import ModalCustom from "../../../../components/Modal/ModalCustom";
-import TourBtn from "../../../../images/schedule-a-tour-button-white.png";
-import Space from "../../../../images/awesome-inc-space-banner.jpeg";
-import Arrow from "../../../../images/arrow.png";
+import TourBtn from "../../../../images/icons/schedule-a-tour-white.png";
+import Space from "../../../../images/ainc-space.jpeg";
+import Arrow from "../../../../images/graphics/arrow-right.png";
 
 const SeeTheSpace = (props) => {
   const videoLinkSrc = "https://www.youtube.com/watch?v=0YgGYadr7rk";
