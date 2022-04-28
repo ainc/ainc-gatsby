@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <Navbar className="sticky-top" bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="/" className={`w-100 text-uppercase ${navbarBrand}`}>
+        <Navbar.Brand href="/" className={`w-75 text-uppercase ${navbarBrand}`}>
           <StaticImage
             src="../../images/logo.png"
             width={logo_width}

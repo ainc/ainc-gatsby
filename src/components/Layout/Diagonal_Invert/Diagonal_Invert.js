@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import * as styles from "../../../styles/Variables";
 
-const Rotation = -5;
+const Rotation = 5;
 const width = 100;
 const fullWidth = 100;
 // const MagicNumber = 0.09719;
@@ -37,12 +37,15 @@ const DiagonalDiv = styled.div`
 `;
 
 const ContentDiv = styled.div`
+  display: flex,
+  justify-content: center,
+  align-items: center,
   max-width: 100vw;
   margin: 0 auto;
   padding: 1.5em;
   position: relative;
 `;
-const Diagonal = (props) => {
+const DiagonalInvert = (props) => {
   return (
     <DiagonalDiv {...props}>
       <ContentDiv>{props.children}</ContentDiv>
@@ -50,4 +53,4 @@ const Diagonal = (props) => {
   );
 };
 
-export default Diagonal;
+export default DiagonalInvert;

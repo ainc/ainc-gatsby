@@ -108,5 +108,18 @@
 .cost-header {
   font-weight: 700;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.cost-text {
+  margin-top: 50px;
+  font-size: 12px;
+  margin-bottom: 50px;
+}
+
+.cost-text span a {
+  text-decoration: none;
+  color: #a21b22;
+  outline: 0;
 }

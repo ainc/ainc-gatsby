@@ -185,12 +185,28 @@ const Bootcamp_Apply = ({ data }) => {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <h5 className={styles.costHeader}>Income Share Agreement</h5>
-            <p cl></p>
+            <p className={styles.costText}>
+              Fund your future with an Income Share Agreement. We&#39;re partnered with
+              industry-leading ISA provider{" "}
+              <span>
+                <a href="https://www.meratas.com/">Meratas</a>
+              </span>{" "}
+              to allow students to enroll in our full-time program with no up front
+              tuition costs. ISA recipients only pay when they&#39;ve landed a job making
+              $40,000/year or more. Want to know more?{" "}
+              <span>
+                <a href="/">Schedule a call today!</a>
+              </span>{" "}
+            </p>
           </Col>
-          <Col>
+          <Col sm={12} md={6}>
             <h5 className={styles.costHeader}>Up-front payment</h5>
+            <p className={styles.costText}>
+              Students who choose to pay tuition up front are offered a discounted tuition
+              rate of $13,500.
+            </p>
           </Col>
         </Row>
       </Container>
