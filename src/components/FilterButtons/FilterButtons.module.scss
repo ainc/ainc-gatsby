@@ -1,0 +1,15 @@
+div.thin-margin {
+  margin: 10px 0;
+}
+
+button {
+  background: none;
+  border: none;
+  border-left: 1px solid #bbb;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+button.no-line {
+  border-left: 0px;
+}
