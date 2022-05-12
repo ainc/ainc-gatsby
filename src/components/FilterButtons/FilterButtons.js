@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as styles from './FilterButtons.module.scss'
 
+// TODO: Make FilterButtons look better when taking up more area instead of wrapping to next line
+
 const FilterButtons = ({ data, filterAttribute, setData, filters }) => {
   const getNestedAttribute = (object, attribute) => {
     let currObj = object
