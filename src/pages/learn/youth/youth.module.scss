@@ -1,0 +1,128 @@
+@import '../../../styles/mixins/responsive.scss';
+@import '../../../styles/variables.scss';
+
+
+a {
+  color: inherit !important;
+  text-decoration: inherit !important;
+  font-weight: inherit !important;
+}
+
+section.header {
+  background-image: url(../../../images/youth-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  > div {
+    padding: 20vh 0;
+  }
+
+  h1 {
+    padding: 20px 0;
+  }
+
+  h2 {
+    margin-bottom: 6.3rem;
+    font-style: italic;
+    font-weight: 200;
+  }
+
+  * {
+    color: white;
+  }
+}
+
+section.why {
+  background-image: url(../../../images/youth-engaged-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 60%;
+  
+  > div > div { // all rows
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    > div {
+      margin: auto;
+      
+      &.image > div {
+        height: 25rem;
+        @include screen-xs {
+          // background-color: red;
+          // display: none;
+          
+          // this is all bad
+
+          width: 0 !important;
+          max-width: 0 !important;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding: 0 !important;
+        }
+      }
+
+      &.left {
+        margin-right: 1.5rem;
+        text-align: right;
+        @include screen-laptop-min {
+          padding-left: 15%;
+        }
+      }
+      
+      &.right {
+        margin-left: 1.5rem;
+        text-align: left;
+        @include screen-laptop-min {
+          padding-right: 15%;
+        }
+      }
+    }
+  }
+}
+
+section.schedule {
+  padding: 4rem 0;
+  background-color: $brand-grey-lightest;
+
+  div.student-image {
+    @include screen-xs {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+section.camps {
+  padding-top: 4rem;
+
+  div.image {
+    @include screen-xs {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+section.join {
+  background-image: url(../../../images/youth-membership-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+section.questions {
+  background-image: url(../../../images/bootcamp-faq-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 8rem 0;
+
+  h1 {
+    font-weight: 900;
+  }
+}
