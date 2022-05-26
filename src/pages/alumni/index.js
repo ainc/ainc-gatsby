@@ -10,7 +10,7 @@ const AlumniPage = ({ data }) => {
     <Layout pageTitle="Awesome Inc U Bootcamp Alumni">
       <Container>
         <Row>
-        {
+        {/* {
           data.allNodeBootcampAlumni.nodes.map((node) => (
             <div className="col-3" key={node.id}>
               <Profile 
@@ -24,41 +24,41 @@ const AlumniPage = ({ data }) => {
               </Profile>
             </div>
           ))
-        }
+        } */}
         </Row>
       </Container>
     </Layout>
   )
 }
 
-export const query = graphql`
-query MyQuery {
-  allNodeBootcampAlumni {
-    nodes {
-      title
-      id
-      field_linkedin_link {
-        uri
-      }
-      field_github {
-        uri
-      }
-      field_position
-      field_website {
-        uri
-      }
-      relationships {
-        field_picture {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// export const query = graphql`
+// query MyQuery {
+//   allNodeBootcampAlumni {
+//     nodes {
+//       title
+//       id
+//       field_linkedin_link {
+//         uri
+//       }
+//       field_github {
+//         uri
+//       }
+//       field_position
+//       field_website {
+//         uri
+//       }
+//       relationships {
+//         field_picture {
+//           localFile {
+//             childImageSharp {
+//               gatsbyImageData(layout: CONSTRAINED)
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
 export default AlumniPage
