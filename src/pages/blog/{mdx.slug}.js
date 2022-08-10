@@ -59,7 +59,6 @@ const MarkdownWrapper = styled.div`
     font-size: 17px;
     line-height: 25.5px;
   }
-
   blockquote:before {
     content: "\\201c";
     font-family: "Font Awesome 5 Free";

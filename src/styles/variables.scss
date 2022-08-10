@@ -36,6 +36,15 @@ $heading-font: 'Open Sans', sans-serif;
 $subheading-font: 'Open Sans', sans-serif;
 $base-font: 'Open Sans', sans-serif;
 
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+
 $font-size-base: 12;
 $font-size-text: 10;
 $navbar-height: 78px;

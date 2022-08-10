@@ -32,6 +32,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `tutorials`,
+        path: `${__dirname}/tutorials`,
+      }
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       // options: {
       //   rule: {
@@ -39,6 +46,18 @@ module.exports = {
       //   }
       // }
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
   ],
 };
