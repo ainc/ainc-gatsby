@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-// import { Container, Row } from 'react-bootstrap'
-// import Banner from '../Banner/Banner'
-// import Header from '../Header/Header'
-// import Footer from '../Footer/Footer'
+import { Container, Row } from 'react-bootstrap'
+import Banner from '../Banner/Banner'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -25,12 +25,12 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <GlobalStyle />
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      {/* <Banner /> */}
-      {/* <Header /> */}
+      <Banner />
+      <Header />
       <div>
         {children}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
