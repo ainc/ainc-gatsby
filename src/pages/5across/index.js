@@ -12,14 +12,14 @@ import PastWinners from "./components/PastWinners/PastWinners";
 import Sponsors from "../../components/Sponsors/Sponsors";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
-import fiveAcrossRedCircle from "../../images/5across-big-red-circle.png";
-import fiveAcrossBanner from "../../images/5across-banner.png";
-import fiveAcrossPitch from "../../images/5across-pitches.png";
-import fiveAcrossTime from "../../images/5across-time.png";
-import fiveAcrossPrize from "../../images/5across-prize.png";
-import fiveAcrossStart from "../../images/5across-start.png";
-import fiveAcrossEntry from "../../images/5across-entry.png";
-import dabbingUnicorn from "../../images/dabbing_unicorn.png";
+import fiveAcrossRedCircle from "../../images/graphics/red-semicircle.png";
+import fiveAcrossBanner from "../../images/logos/5-across-logo-text.png";
+import fiveAcrossPitch from "../../images/icons/microphone-5-pitches.png";
+import fiveAcrossTime from "../../images/icons/stopwatch-5-minutes.png";
+import fiveAcrossPrize from "../../images/icons/trophy-500-cash-prize.png";
+import fiveAcrossStart from "../../images/icons/clock-5-pm-start.png";
+import fiveAcrossEntry from "../../images/icons/dollar-sign-5-entry-fee.png";
+import dabbingUnicorn from "../../images/unicorn-dab.png";
 
 const Index = ({ data }) => {
   //second query in page. Renders single winner_completed true value, sorted by DESC

@@ -10,21 +10,21 @@ import Subtitle from "../../components/UI/Subtitle/Subtitle";
 import SeeTheSpace from "./Components/SeeTheSpace/SeeTheSpace";
 import ModalCustom from "../../components/Modal/ModalCustom";
 //Image Links Below
-import Mail from "../../images/virtual-member-mail.png";
-import Desktop from "../../images/Desk.png";
-import Lock from "../../images/lock.png";
-import Wifi from "../../images/wifi.png";
-import MailAddress from "../../images/mailing-address.png";
-import Chair from "../../images/chair.png";
-import Events from "../../images/events-hosted.png";
-import Printer from "../../images/printer.png";
-import PingPong from "../../images/ping-pong.png";
-import Bubble from "../../images/thinking-room.png";
-import Podcast from "../../images/podcadsting-room.png";
-import Mentor from "../../images/mentor.png";
-import Lightbulb from "../../images/indoor-outdoor.png";
-import Scooter from "../../images/electric-scooter.png";
-import ThreeDPrinter from "../../images/3d-printer.png";
+import MailOutline from "../../images/icons/mail-outline.png";
+import DeskOutline from "../../images/icons/desk-outline.png";
+import LockOutline from "../../images/icons/lock-outline.png";
+import Wifi from "../../images/icons/wifi.png";
+import Mail from "../../images/icons/mail.png";
+import Chair from "../../images/icons/chair.png";
+import Calendar from "../../images/icons/calendar.png";
+import Printer from "../../images/icons/printer.png";
+import PingPong from "../../images/icons/ping-pong.png";
+import ThoughtBubble from "../../images/icons/thought-bubble.png";
+import Connection from "../../images/icons/connection.png";
+import Microphone from "../../images/icons/microphone.png";
+import LightbulbSun from "../../images/icons/lightbulb-sun.png";
+import Scooter from "../../images/icons/scooter.png";
+import Cube from "../../images/icons/cube.png";
 
 const WorkspacePage = () => {
   const [lgShow, setLgShow] = useState(false);
@@ -66,7 +66,7 @@ const WorkspacePage = () => {
             <Col md={4} sm={12}>
               <MemberOption
                 imgModal="#"
-                imgSrc={Mail}
+                imgSrc={MailOutline}
                 header="VIRTUAL MEMBER"
                 infoOne="DOWNTOWN MAILING ADDRESS"
                 infoTwo="CONFERENCE ROOM ACCESS"
@@ -79,7 +79,7 @@ const WorkspacePage = () => {
             <Col md={4} sm={12}>
               <MemberOption
                 imgModal="#"
-                imgSrc={Desktop}
+                imgSrc={DeskOutline}
                 header="OPEN DESK MEMBER"
                 infoOne="24/7 Access to Our Space"
                 infoTwo="Conference Room Access"
@@ -91,7 +91,7 @@ const WorkspacePage = () => {
             <Col md={4} sm={12}>
               <MemberOption
                 imgModal="#"
-                imgSrc={Lock}
+                imgSrc={LockOutline}
                 header="PRIVATE OFFICE"
                 infoOne="Private Office Space"
                 infoTwo="Conference Room Access"
@@ -128,7 +128,7 @@ const WorkspacePage = () => {
                 <Col md={6} sm={12}>
                   <Amenities
                     info="Downtown Mailing Address"
-                    imgSrc={MailAddress}
+                    imgSrc={Mail}
                     alt="Mailing Address"
                   />
                 </Col>
@@ -140,7 +140,7 @@ const WorkspacePage = () => {
                   />
                 </Col>
                 <Col md={6} sm={12}>
-                  <Amenities info="Networking Events" imgSrc={Events} alt="Networking Events" />
+                  <Amenities info="Networking Events" imgSrc={Calendar} alt="Networking Events" />
                 </Col>
                 <Col md={6} sm={12}>
                   <Amenities info="Print + Copy" imgSrc={Printer} alt="Printing and Copying" />
@@ -153,18 +153,18 @@ const WorkspacePage = () => {
                   />
                 </Col>
                 <Col md={6} sm={12}>
-                  <Amenities info="Thinking Room" imgSrc={Bubble} alt="Thinking Room" />
+                  <Amenities info="Thinking Room" imgSrc={ThoughtBubble} alt="Thinking Room" />
                 </Col>
                 <Col md={6} sm={12}>
-                  <Amenities info="Mentorship" imgSrc={Mentor} alt="Mentorship Access" />
+                  <Amenities info="Mentorship" imgSrc={Connection} alt="Mentorship Access" />
                 </Col>
                 <Col md={6} sm={12}>
-                  <Amenities info="Podcasting Room" imgSrc={Podcast} alt="Podcast Room" />
+                  <Amenities info="Podcasting Room" imgSrc={Microphone} alt="Podcast Room" />
                 </Col>
                 <Col md={6} sm={12}>
                   <Amenities
                     info="Indoor/Outdoor space"
-                    imgSrc={Lightbulb}
+                    imgSrc={LightbulbSun}
                     alt="Indoor/Outdoor space"
                   />
                 </Col>
@@ -172,7 +172,7 @@ const WorkspacePage = () => {
                   <Amenities info="Electric Scooters" imgSrc={Scooter} alt="Electric Scooters" />
                 </Col>
                 <Col md={6} sm={12}>
-                  <Amenities info="3D Printer" imgSrc={ThreeDPrinter} alt="3D Printer" />
+                  <Amenities info="3D Printer" imgSrc={Cube} alt="3D Printer" />
                 </Col>
               </Row>
             </Col>

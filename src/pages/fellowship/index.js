@@ -69,7 +69,7 @@ const FellowshipPage = ({ data }) => {
             <BrandButton className="my-3">Apply Now</BrandButton>
           </Col>
           <Col className="" xs={12} sm={8}>
-            <StaticImage src="../../images/brainstorming.jpg" width='375px' className='position-relative' alt="people brainstorming"/>
+            <StaticImage src="../../images/people-brainstorming.jpg" width='375px' className='position-relative' alt="people brainstorming"/>
             
           </Col>
         </Row>
@@ -125,7 +125,7 @@ const FellowshipPage = ({ data }) => {
           </Col>
           <Col xs={4} sm={6}>
             <Title>How it Works</Title>
-            <StaticImage src="../../images/arrow-red.png" alt="red arrow"/>
+            <StaticImage src="../../images/graphics/arrow-left-red.png" alt="red arrow"/>
           </Col>
         </Row>
       </Container>
